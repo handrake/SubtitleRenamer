@@ -131,6 +131,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "파일 추가";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -142,6 +143,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "전체 삭제";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -154,6 +156,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "삭제";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tableLayoutPanel5
             // 
@@ -184,6 +187,7 @@
             this.button4.TabIndex = 0;
             this.button4.Text = "파일 추가";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -195,6 +199,7 @@
             this.button5.TabIndex = 1;
             this.button5.Text = "전체 삭제";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -206,6 +211,7 @@
             this.button6.TabIndex = 2;
             this.button6.Text = "  삭제  ";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label2
             // 
@@ -238,10 +244,12 @@
             // 
             this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.HorizontalScrollbar = true;
             this.listBox1.ItemHeight = 24;
             this.listBox1.Location = new System.Drawing.Point(40, 70);
             this.listBox1.Margin = new System.Windows.Forms.Padding(40, 20, 40, 0);
             this.listBox1.Name = "listBox1";
+            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBox1.Size = new System.Drawing.Size(501, 454);
             this.listBox1.TabIndex = 2;
             // 
@@ -249,10 +257,12 @@
             // 
             this.listBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox2.FormattingEnabled = true;
+            this.listBox2.HorizontalScrollbar = true;
             this.listBox2.ItemHeight = 24;
             this.listBox2.Location = new System.Drawing.Point(40, 70);
             this.listBox2.Margin = new System.Windows.Forms.Padding(40, 20, 40, 0);
             this.listBox2.Name = "listBox2";
+            this.listBox2.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBox2.Size = new System.Drawing.Size(501, 454);
             this.listBox2.TabIndex = 2;
             // 
@@ -265,6 +275,7 @@
             this.button7.TabIndex = 3;
             this.button7.Text = "변환";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Form1
             // 
@@ -273,7 +284,7 @@
             this.ClientSize = new System.Drawing.Size(1174, 729);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
-            this.Text = " ";
+            this.Text = "Subtitle Renamer";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
