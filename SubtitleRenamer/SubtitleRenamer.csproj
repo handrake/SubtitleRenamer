@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{75672E2E-4D99-4BC2-B747-884F516FF643}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SubtitleRename</RootNamespace>
-    <AssemblyName>SubtitleRename</AssemblyName>
+    <RootNamespace>SubtitleRenamer</RootNamespace>
+    <AssemblyName>SubtitleRenamer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
