@@ -111,10 +111,10 @@ namespace SubtitleRenamer
                     Path.GetFileNameWithoutExtension(movieFileName) + "." + Path.GetExtension(subtitleFileName));
                 if (File.Exists(subtitleNewFileName))
                 {
-                    dr = MessageBox.Show(String.Format("자막 파일 {0}이 이미 존재합니다. 덮어 쓸까요?", Path.GetFileName(subtitleNewFileName)), "", MessageBoxButtons.YesNoCancel);
+                    dr = MessageBox.Show(String.Format("자막 파일 {0}이 이미 존재합니다. 덮어 쓸까요?",
+                        Path.GetFileName(subtitleNewFileName)), "", MessageBoxButtons.YesNoCancel);
                     if (dr == DialogResult.Cancel)
                     {
-
                         MessageBox.Show("변환을 취소했습니다");
                         return;
                     }
