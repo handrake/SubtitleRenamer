@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.IO;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SubtitleRenamer
 {
@@ -153,6 +155,118 @@ namespace SubtitleRenamer
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
             foreach (string file in files)
                 listBox2.Items.Add(file);
+        }
+
+        private void moveUpListBoxItems(int index, ListBox listBox)
+        {
+            if (index < 0 || listBox.SelectedItems.Count < 1 || listBox.SelectedIndices[0] < 1)
+            {
+                return;
+            }
+
+            List<string> moveList = listBox.SelectedItems.Cast<string>().ToList();
+
+            for (int i = listBox.SelectedIndices.Count - 1; i >= 0; i--)
+            {
+                listBox.Items.RemoveAt(listBox.SelectedIndices[i]);
+            }
+
+            for (int i = moveList.Count - 1; i >= 0; i--)
+            {
+                listBox.Items.Insert(index, moveList[i]);
+                listBox.SelectedIndices.Add(index);
+            }
+        }
+
+        private void moveDownListBoxItems(int index, ListBox listBox)
+        {
+            if (index > listBox.Items.Count - 1 || listBox.SelectedItems.Count < 1
+                || listBox.SelectedIndices.Cast<int>().ToList().Last() > listBox.Items.Count - 1)
+            {
+                return;
+            }
+
+            List<string> moveList = listBox.SelectedItems.Cast<string>().ToList();
+            moveList.Reverse();
+
+            for (int i = 0; i < moveList.Count; i++)
+            {
+                listBox.Items.RemoveAt(listBox.SelectedIndices[0]);
+            }
+
+            for (int i = 0; i < moveList.Count; i++)
+            {
+                listBox.Items.Insert(index - moveList.Count + 1, moveList[i]);
+                listBox.SelectedIndices.Add(index - moveList.Count + 1);
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            moveUpListBoxItems(0, listBox1);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                moveUpListBoxItems(listBox1.SelectedIndices[0] - 1, listBox1);
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                moveDownListBoxItems(listBox1.SelectedIndices.Cast<int>().ToList().Last() + 1, listBox1);
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            moveDownListBoxItems(listBox1.Items.Count - 1, listBox1);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            moveUpListBoxItems(0, listBox2);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                moveUpListBoxItems(listBox2.SelectedIndices[0] - 1, listBox2);
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                moveDownListBoxItems(listBox2.SelectedIndices.Cast<int>().ToList().Last() + 1, listBox2);
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            moveDownListBoxItems(listBox2.Items.Count - 1, listBox2);
         }
     }
 }
