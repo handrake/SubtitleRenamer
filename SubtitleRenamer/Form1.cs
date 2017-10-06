@@ -109,6 +109,11 @@ namespace SubtitleRenamer
                 String subtitleFileName = listBox2.Items[i].ToString();
                 String subtitleNewFileName = Path.Combine(Path.GetDirectoryName(movieFileName),
                     Path.GetFileNameWithoutExtension(movieFileName) + "." + Path.GetExtension(subtitleFileName));
+
+                if (subtitleFileName == subtitleNewFileName)
+                {
+                    continue;
+                }
                 if (File.Exists(subtitleNewFileName))
                 {
                     dr = MessageBox.Show(String.Format("자막 파일 {0}이 이미 존재합니다. 덮어 쓸까요?",
