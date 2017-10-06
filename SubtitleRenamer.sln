@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubtitleRenamer", "SubtitleRenamer\SubtitleRenamer.csproj", "{75672E2E-4D99-4BC2-B747-884F516FF643}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SubtitleRenamerSetup", "SubtitleRenamerSetup\SubtitleRenamerSetup.vdproj", "{377FA5B1-8954-4F49-B685-D0600F6D7769}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{75672E2E-4D99-4BC2-B747-884F516FF643}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75672E2E-4D99-4BC2-B747-884F516FF643}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75672E2E-4D99-4BC2-B747-884F516FF643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{377FA5B1-8954-4F49-B685-D0600F6D7769}.Debug|Any CPU.ActiveCfg = Debug
+		{377FA5B1-8954-4F49-B685-D0600F6D7769}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
