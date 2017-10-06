@@ -85,6 +85,8 @@ namespace SubtitleRenamer
 
         private void button7_Click(object sender, EventArgs e)
         {
+            Dictionary<string, string> deletedSubtitles = new Dictionary<string, string>();
+
             if (listBox1.Items.Count == 0)
             {
                 MessageBox.Show("동영상 파일이 없습니다");
@@ -120,6 +122,12 @@ namespace SubtitleRenamer
                     {
                         continue;
                     }
+                    deletedSubtitles.Add(subtitleNewFileName, Path.Combine(Path.GetTempPath(), Path.GetRandomFileName()));
+                    File.Copy(subtitleNewFileName, deletedSubtitles[subtitleNewFileName], true);
+                }
+                if (deletedSubtitles.ContainsKey(subtitleFileName))
+                {
+                    subtitleFileName = deletedSubtitles[subtitleFileName];
                 }
                 File.Copy(subtitleFileName, subtitleNewFileName, true);
                 File.Delete(subtitleFileName);
