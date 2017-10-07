@@ -298,7 +298,7 @@ namespace SubtitleRenamer
 
         private void sortListBoxItems(ref ListBox listBox, bool descending = false)
         {
-            var listItems = listBox1.Items.Cast<string>().ToList();
+            var listItems = listBox.Items.Cast<string>().ToList();
             listBox.Items.Clear();
             if (descending)
             {
