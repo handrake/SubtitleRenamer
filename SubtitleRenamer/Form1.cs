@@ -119,7 +119,7 @@ namespace SubtitleRenamer
                 String movieFileName = listBox1.Items[i].ToString();
                 String subtitleFileName = listBox2.Items[i].ToString();
                 String subtitleNewFileName = Path.Combine(Path.GetDirectoryName(movieFileName),
-                    Path.GetFileNameWithoutExtension(movieFileName) + "." + Path.GetExtension(subtitleFileName));
+                    Path.GetFileNameWithoutExtension(movieFileName) + Path.GetExtension(subtitleFileName));
 
                 if (subtitleFileName == subtitleNewFileName)
                 {
