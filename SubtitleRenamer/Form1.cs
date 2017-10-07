@@ -3,6 +3,9 @@ using System.Windows.Forms;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
+
+using static SubtitleRenamer.NativeMethods;
 
 namespace SubtitleRenamer
 {
@@ -138,10 +141,21 @@ namespace SubtitleRenamer
                 File.Delete(subtitleFileName);
             }
 
+            if (checkedListBox1.GetItemChecked(0))
+            {
+                System.Diagnostics.Process process = new System.Diagnostics.Process();
+                System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                startInfo.FileName = Path.GetFileName(AssocQueryString(AssocStr.Executable, listBox1.Items[0].ToString()));
+                startInfo.Arguments = String.Join(" ", listBox1.Items.Cast<string>().ToList().Select(x => "\"" + x + "\""));
+                Process.Start(startInfo);
+            }
+            else
+            {
+                MessageBox.Show("변환이 완료됐습니다");
+            }
+
             listBox1.Items.Clear();
             listBox2.Items.Clear();
-
-            MessageBox.Show("변환이 완료됐습니다");
         }
 
         private void listBox1_DragEnter(object sender, DragEventArgs e)
