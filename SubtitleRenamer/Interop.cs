@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 
 namespace SubtitleRenamer
 {
-    public static class NativeMethods
+    internal static class NativeMethods
     {
         [Flags]
-        public enum AssocF : uint
+        internal enum AssocF : uint
         {
             None = 0,
             Init_NoRemapCLSID = 0x1,
@@ -29,7 +29,7 @@ namespace SubtitleRenamer
             InitForFile = 0x2000,
         }
 
-        public enum AssocStr
+        internal enum AssocStr
         {
             Command = 1,
             Executable,
@@ -54,8 +54,9 @@ namespace SubtitleRenamer
         }
 
         [DllImport("Shlwapi.dll", SetLastError = true, CharSet = CharSet.Auto)]
-        public static extern uint AssocQueryString(AssocF flags, AssocStr str, string pszAssoc, string pszExtra, [Out] StringBuilder pszOut, ref uint pcchOut);
-        public static string AssocQueryString(AssocStr association, string extension)
+        internal static extern uint AssocQueryString(AssocF flags, AssocStr str, [MarshalAs (UnmanagedType.LPWStr)] string pszAssoc,
+            [MarshalAs (UnmanagedType.LPWStr)] string pszExtra, [MarshalAs (UnmanagedType.LPWStr)] [Out] StringBuilder pszOut, ref uint pcchOut);
+        internal static string AssocQueryString(AssocStr association, string extension)
         {
             uint length = 0;
             uint ret = AssocQueryString(AssocF.None, association, extension, null, null, ref length);
