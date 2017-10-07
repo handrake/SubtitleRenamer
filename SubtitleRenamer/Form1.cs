@@ -40,6 +40,10 @@ namespace SubtitleRenamer
                 {
                     listBox1.Items.Add(file);
                 }
+                if (checkedListBox1.GetItemChecked(1))
+                {
+                    sortListBoxItems(ref listBox1);
+                }
             }
         }
 
@@ -69,6 +73,10 @@ namespace SubtitleRenamer
                 foreach (String file in openFileDialog1.FileNames)
                 {
                     listBox2.Items.Add(file);
+                }
+                if (checkedListBox1.GetItemChecked(1))
+                {
+                    sortListBoxItems(ref listBox2);
                 }
             }
         }
@@ -169,6 +177,10 @@ namespace SubtitleRenamer
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
             foreach (string file in files)
                 listBox1.Items.Add(file);
+            if (checkedListBox1.GetItemChecked(1))
+            {
+                sortListBoxItems(ref listBox1);
+            }
         }
 
         private void listBox2_DragEnter(object sender, DragEventArgs e)
@@ -182,6 +194,10 @@ namespace SubtitleRenamer
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
             foreach (string file in files)
                 listBox2.Items.Add(file);
+            if (checkedListBox1.GetItemChecked(1))
+            {
+                sortListBoxItems(ref listBox2);
+            }
         }
 
         private void moveUpListBoxItems(int index, ListBox listBox)

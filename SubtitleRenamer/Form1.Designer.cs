@@ -471,7 +471,8 @@
             this.checkedListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
-            "변환 후 동영상 열기"});
+            "변환 후 동영상 열기",
+            "자동 정렬"});
             this.checkedListBox1.Location = new System.Drawing.Point(50, 603);
             this.checkedListBox1.Margin = new System.Windows.Forms.Padding(50, 20, 50, 20);
             this.checkedListBox1.Name = "checkedListBox1";
