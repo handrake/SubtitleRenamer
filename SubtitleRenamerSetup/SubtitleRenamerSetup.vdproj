@@ -62,6 +62,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
         "Release"
@@ -222,15 +230,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SubtitleRenamer"
-        "ProductCode" = "8:{44779CC6-9D75-47BC-AE6B-3D2A49693612}"
-        "PackageCode" = "8:{9E86E772-6043-4EDC-9776-F36F1C7B7DB6}"
+        "ProductCode" = "8:{DDAF4061-28C5-4889-BF55-5627BA2D9145}"
+        "PackageCode" = "8:{8C3F3AF0-92A4-4C73-BCF3-AE164E2526F7}"
         "UpgradeCode" = "8:{DA7905A4-D327-42C4-BBF3-FED36422E55F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:0.0.4"
+        "ProductVersion" = "8:0.0.5"
         "Manufacturer" = "8:handrake"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
