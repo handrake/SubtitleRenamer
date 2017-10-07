@@ -295,5 +295,39 @@ namespace SubtitleRenamer
         {
             moveDownListBoxItems(listBox2.Items.Count - 1, listBox2);
         }
+
+        private void sortListBoxItems(ref ListBox listBox, bool descending = false)
+        {
+            var listItems = listBox1.Items.Cast<string>().ToList();
+            listBox.Items.Clear();
+            if (descending)
+            {
+                listBox.Items.AddRange(listItems.OrderByDescending(x => x).ToArray());
+            }
+            else
+            {
+                listBox.Items.AddRange(listItems.OrderBy(x => x).ToArray());
+            }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            sortListBoxItems(ref listBox1, true);
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            sortListBoxItems(ref listBox1);
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            sortListBoxItems(ref listBox2, true);
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            sortListBoxItems(ref listBox2);
+        }
     }
 }
