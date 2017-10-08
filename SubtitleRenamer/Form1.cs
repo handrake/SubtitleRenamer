@@ -151,8 +151,7 @@ namespace SubtitleRenamer
 
             if (checkedListBox1.GetItemChecked(0))
             {
-                System.Diagnostics.Process process = new System.Diagnostics.Process();
-                System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.FileName = Path.GetFileName(AssocQueryString(AssocStr.Executable, listBox1.Items[0].ToString()));
                 startInfo.Arguments = String.Join(" ", listBox1.Items.Cast<string>().ToList().Select(x => "\"" + x + "\""));
                 Process.Start(startInfo);
