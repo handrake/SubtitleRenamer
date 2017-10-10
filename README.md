@@ -6,4 +6,4 @@
 
 왼쪽에 동영상, 오른쪽에 자막 파일을 순서에 맞춰 추가하고 변환 버튼을 누르면 됩니다.
 
- <img src="https://i.imgur.com/jmzZR7h.png" width="600">
+ <img src="https://i.imgur.com/4u8ukjO.png" width="600">
