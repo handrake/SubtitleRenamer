@@ -344,5 +344,11 @@ namespace SubtitleRenamer
         {
             sortListBoxItems(ref listBox2);
         }
+
+        private void informationMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form2 = new Form2();
+            form2.ShowDialog();
+        }
     }
 }
