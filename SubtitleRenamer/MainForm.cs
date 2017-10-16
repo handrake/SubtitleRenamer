@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.IO;
+using System.IO.Compression;
 using System.Collections.Generic;
 using System.Linq;
 using System.Diagnostics;
@@ -94,7 +95,7 @@ namespace SubtitleRenamer
             }
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void processButton_Click(object sender, EventArgs e)
         {
             Dictionary<string, string> deletedSubtitles = new Dictionary<string, string>();
 
@@ -120,6 +121,39 @@ namespace SubtitleRenamer
                 String subtitleFileName = listBox2.Items[i].ToString();
                 String subtitleNewFileName = Path.Combine(Path.GetDirectoryName(movieFileName),
                     Path.GetFileNameWithoutExtension(movieFileName) + Path.GetExtension(subtitleFileName));
+
+                if (Path.GetExtension(subtitleFileName).ToLower() == ".zip")
+                {
+                    try
+                    {
+                        using (ZipArchive archive = ZipFile.Open(subtitleFileName, ZipArchiveMode.Read))
+                        {
+                            List<string> zipFileNames = new List<string>();
+                            foreach (var entry in archive.Entries)
+                            {
+                                zipFileNames.Add(entry.FullName);
+                            }
+                            ZipFilesForm zipFilesForm = new ZipFilesForm(zipFileNames);
+                            zipFilesForm.ShowDialog();
+
+                            if (!zipFilesForm.ok)
+                            {
+                                continue;
+                            }
+                            string selectedFileExtension = Path.GetExtension(zipFilesForm.selectedSubtitleFileName);
+                            subtitleFileName = Path.Combine(Path.GetTempPath(),
+                                Path.GetFileNameWithoutExtension(Path.GetRandomFileName()) + selectedFileExtension);
+                            archive.GetEntry(zipFilesForm.selectedSubtitleFileName).ExtractToFile(subtitleFileName);
+                            subtitleNewFileName = Path.Combine(Path.GetDirectoryName(subtitleNewFileName),
+                                Path.GetFileNameWithoutExtension(subtitleNewFileName) + selectedFileExtension);
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Zip 파일 형식이 잘못됐습니다");
+                        continue;
+                    }
+                }
 
                 if (subtitleFileName == subtitleNewFileName)
                 {
