@@ -12,6 +12,13 @@ namespace SubtitleRenamer
 {
     public partial class MainForm : Form
     {
+        enum Result
+        {
+            Continue,
+            Return,
+            Ok
+        };
+
         public MainForm()
         {
             InitializeComponent();
@@ -95,6 +102,40 @@ namespace SubtitleRenamer
             }
         }
 
+        private Result getSubtitleFileFromZip(ref string subtitleFileName, ref string subtitleNewFileName)
+        {
+            try
+            {
+                using (ZipArchive archive = ZipFile.Open(subtitleFileName, ZipArchiveMode.Read))
+                {
+                    List<string> zipFileNames = new List<string>();
+                    foreach (var entry in archive.Entries)
+                    {
+                        zipFileNames.Add(entry.FullName);
+                    }
+                    ZipFilesForm zipFilesForm = new ZipFilesForm(zipFileNames);
+                    zipFilesForm.ShowDialog();
+
+                    if (!zipFilesForm.ok)
+                    {
+                        return Result.Continue;
+                    }
+                    string selectedFileExtension = Path.GetExtension(zipFilesForm.selectedSubtitleFileName);
+                    subtitleFileName = Path.Combine(Path.GetTempPath(),
+                        Path.GetFileNameWithoutExtension(Path.GetRandomFileName()) + selectedFileExtension);
+                    archive.GetEntry(zipFilesForm.selectedSubtitleFileName).ExtractToFile(subtitleFileName);
+                    subtitleNewFileName = Path.Combine(Path.GetDirectoryName(subtitleNewFileName),
+                        Path.GetFileNameWithoutExtension(subtitleNewFileName) + selectedFileExtension);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Zip 파일 형식이 잘못됐습니다");
+                return Result.Continue;
+            }
+            return Result.Ok;
+        }
+
         private void processButton_Click(object sender, EventArgs e)
         {
             Dictionary<string, string> deletedSubtitles = new Dictionary<string, string>();
@@ -124,33 +165,8 @@ namespace SubtitleRenamer
 
                 if (Path.GetExtension(subtitleFileName).ToLower() == ".zip")
                 {
-                    try
+                    if (getSubtitleFileFromZip(ref subtitleFileName, ref subtitleNewFileName) == Result.Continue)
                     {
-                        using (ZipArchive archive = ZipFile.Open(subtitleFileName, ZipArchiveMode.Read))
-                        {
-                            List<string> zipFileNames = new List<string>();
-                            foreach (var entry in archive.Entries)
-                            {
-                                zipFileNames.Add(entry.FullName);
-                            }
-                            ZipFilesForm zipFilesForm = new ZipFilesForm(zipFileNames);
-                            zipFilesForm.ShowDialog();
-
-                            if (!zipFilesForm.ok)
-                            {
-                                continue;
-                            }
-                            string selectedFileExtension = Path.GetExtension(zipFilesForm.selectedSubtitleFileName);
-                            subtitleFileName = Path.Combine(Path.GetTempPath(),
-                                Path.GetFileNameWithoutExtension(Path.GetRandomFileName()) + selectedFileExtension);
-                            archive.GetEntry(zipFilesForm.selectedSubtitleFileName).ExtractToFile(subtitleFileName);
-                            subtitleNewFileName = Path.Combine(Path.GetDirectoryName(subtitleNewFileName),
-                                Path.GetFileNameWithoutExtension(subtitleNewFileName) + selectedFileExtension);
-                        }
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Zip 파일 형식이 잘못됐습니다");
                         continue;
                     }
                 }
