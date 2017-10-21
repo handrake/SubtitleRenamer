@@ -148,6 +148,7 @@ namespace SubtitleRenamer
             else if (listBox2.Items.Count == 0)
             {
                 MessageBox.Show("자막 파일이 없습니다");
+                return;
             }
             else if (listBox1.Items.Count != listBox2.Items.Count)
             {
