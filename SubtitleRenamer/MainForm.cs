@@ -37,7 +37,7 @@ namespace SubtitleRenamer
             DialogResult dr = openFileDialog1.ShowDialog();
             if (dr == System.Windows.Forms.DialogResult.OK)
             {
-                foreach (String file in openFileDialog1.FileNames)
+                foreach (string file in openFileDialog1.FileNames)
                 {
                     listBox1.Items.Add(file);
                 }
@@ -71,7 +71,7 @@ namespace SubtitleRenamer
             DialogResult dr = openFileDialog1.ShowDialog();
             if (dr == System.Windows.Forms.DialogResult.OK)
             {
-                foreach (String file in openFileDialog1.FileNames)
+                foreach (string file in openFileDialog1.FileNames)
                 {
                     listBox2.Items.Add(file);
                 }
@@ -117,9 +117,9 @@ namespace SubtitleRenamer
             for (int i = 0; i < listBox1.Items.Count; i++)
             {
                 DialogResult dr;
-                String movieFileName = listBox1.Items[i].ToString();
-                String subtitleFileName = listBox2.Items[i].ToString();
-                String subtitleNewFileName = Path.Combine(Path.GetDirectoryName(movieFileName),
+                string movieFileName = listBox1.Items[i].ToString();
+                string subtitleFileName = listBox2.Items[i].ToString();
+                string subtitleNewFileName = Path.Combine(Path.GetDirectoryName(movieFileName),
                     Path.GetFileNameWithoutExtension(movieFileName) + Path.GetExtension(subtitleFileName));
 
                 if (Path.GetExtension(subtitleFileName).ToLower() == ".zip")
@@ -161,7 +161,7 @@ namespace SubtitleRenamer
                 }
                 if (File.Exists(subtitleNewFileName))
                 {
-                    dr = MessageBox.Show(String.Format("자막 파일 {0}이 이미 존재합니다. 덮어 쓸까요?",
+                    dr = MessageBox.Show(string.Format("자막 파일 {0}이 이미 존재합니다. 덮어 쓸까요?",
                         Path.GetFileName(subtitleNewFileName)), "", MessageBoxButtons.YesNoCancel);
                     if (dr == DialogResult.Cancel)
                     {
@@ -187,7 +187,7 @@ namespace SubtitleRenamer
             {
                 ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.FileName = Path.GetFileName(AssocQueryString(AssocStr.Executable, listBox1.Items[0].ToString()));
-                startInfo.Arguments = String.Join(" ", listBox1.Items.Cast<string>().ToList().Select(x => "\"" + x + "\""));
+                startInfo.Arguments = string.Join(" ", listBox1.Items.Cast<string>().ToList().Select(x => "\"" + x + "\""));
                 Process.Start(startInfo);
             }
             else
