@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ZipFilesForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.zipListBox = new System.Windows.Forms.ListBox();
+            this.CancelButton = new System.Windows.Forms.Button();
+            this.OkButton = new System.Windows.Forms.Button();
+            this.ZipListBox = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -43,7 +43,7 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.zipListBox, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ZipListBox, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -60,49 +60,49 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Controls.Add(this.button2, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.CancelButton, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.OkButton, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 266);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(768, 60);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
-            // button2
+            // CancelButton
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(387, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 54);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "취소";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.CancelButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CancelButton.Location = new System.Drawing.Point(387, 3);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(186, 54);
+            this.CancelButton.TabIndex = 2;
+            this.CancelButton.Text = "취소";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // button1
+            // OkButton
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(195, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 54);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "확인";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.OkButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OkButton.Location = new System.Drawing.Point(195, 3);
+            this.OkButton.Name = "OkButton";
+            this.OkButton.Size = new System.Drawing.Size(186, 54);
+            this.OkButton.TabIndex = 0;
+            this.OkButton.Text = "확인";
+            this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
-            // zipListBox
+            // ZipListBox
             // 
-            this.zipListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zipListBox.FormattingEnabled = true;
-            this.zipListBox.ItemHeight = 24;
-            this.zipListBox.Location = new System.Drawing.Point(3, 3);
-            this.zipListBox.Name = "zipListBox";
-            this.zipListBox.Size = new System.Drawing.Size(768, 257);
-            this.zipListBox.TabIndex = 2;
-            this.zipListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.zipListBox_MouseDoubleClick);
+            this.ZipListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ZipListBox.FormattingEnabled = true;
+            this.ZipListBox.ItemHeight = 24;
+            this.ZipListBox.Location = new System.Drawing.Point(3, 3);
+            this.ZipListBox.Name = "ZipListBox";
+            this.ZipListBox.Size = new System.Drawing.Size(768, 257);
+            this.ZipListBox.TabIndex = 2;
+            this.ZipListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ZipListBox_MouseDoubleClick);
             // 
             // ZipFilesForm
             // 
@@ -123,9 +123,9 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button OkButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox zipListBox;
+        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.ListBox ZipListBox;
     }
 }

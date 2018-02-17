@@ -24,33 +24,33 @@ namespace SubtitleRenamer
 
         private void ZipFilesForm_Load(object sender, EventArgs e)
         {
-            zipListBox.Items.AddRange(zipFiles.ToArray());
+            ZipListBox.Items.AddRange(zipFiles.ToArray());
         }
 
-        private void subtitleSelected()
+        private void SubtitleSelected()
         {
-            if (zipListBox.Items.Count == 0)
+            if (ZipListBox.Items.Count == 0)
             {
                 MessageBox.Show("자막 파일을 선택하세요");
                 return;
             }
 
-            selectedSubtitleFileName = zipListBox.SelectedItem.ToString();
+            selectedSubtitleFileName = ZipListBox.SelectedItem.ToString();
             ok = true;
             this.Close();
         }
 
-        private void zipListBox_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void ZipListBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            subtitleSelected();
+            SubtitleSelected();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void OkButton_Click(object sender, EventArgs e)
         {
-            subtitleSelected();
+            SubtitleSelected();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
             ok = false;
             this.Close();

@@ -29,11 +29,6 @@ namespace SubtitleRenamer
 
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void AddFileButton1_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -46,25 +41,25 @@ namespace SubtitleRenamer
             {
                 foreach (string file in openFileDialog1.FileNames)
                 {
-                    listBox1.Items.Add(file);
+                    MovieListBox.Items.Add(file);
                 }
                 if (checkedListBox1.GetItemChecked(1))
                 {
-                    sortListBoxItems(ref listBox1);
+                    sortListBoxItems(ref MovieListBox);
                 }
             }
         }
 
         private void DeleteAllButton1_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
+            MovieListBox.Items.Clear();
         }
 
         private void DeleteFileButton1_Click(object sender, EventArgs e)
         {
-            for (int i = listBox1.SelectedIndices.Count - 1; i >= 0; i--)
+            for (int i = MovieListBox.SelectedIndices.Count - 1; i >= 0; i--)
             {
-                listBox1.Items.RemoveAt(listBox1.SelectedIndices[i]);
+                MovieListBox.Items.RemoveAt(MovieListBox.SelectedIndices[i]);
             }
         }
 
@@ -80,29 +75,29 @@ namespace SubtitleRenamer
             {
                 foreach (string file in openFileDialog1.FileNames)
                 {
-                    listBox2.Items.Add(file);
+                    SubtitleListBox.Items.Add(file);
                 }
                 if (checkedListBox1.GetItemChecked(1))
                 {
-                    sortListBoxItems(ref listBox2);
+                    sortListBoxItems(ref SubtitleListBox);
                 }
             }
         }
 
         private void DeleteAllButton2_Click(object sender, EventArgs e)
         {
-            listBox2.Items.Clear();
+            SubtitleListBox.Items.Clear();
         }
 
         private void DeleteFileButton2_Click(object sender, EventArgs e)
         {
-            for (int i = listBox2.SelectedIndices.Count - 1; i >= 0; i--)
+            for (int i = SubtitleListBox.SelectedIndices.Count - 1; i >= 0; i--)
             {
-                listBox2.Items.RemoveAt(listBox2.SelectedIndices[i]);
+                SubtitleListBox.Items.RemoveAt(SubtitleListBox.SelectedIndices[i]);
             }
         }
 
-        private Result getSubtitleFileFromZip(ref string subtitleFileName, ref string subtitleNewFileName)
+        private Result GetSubtitleFileFromZip(ref string subtitleFileName, ref string subtitleNewFileName)
         {
             try
             {
@@ -140,33 +135,33 @@ namespace SubtitleRenamer
         {
             Dictionary<string, string> deletedSubtitles = new Dictionary<string, string>();
 
-            if (listBox1.Items.Count == 0)
+            if (MovieListBox.Items.Count == 0)
             {
                 MessageBox.Show("동영상 파일이 없습니다");
                 return;
             }
-            else if (listBox2.Items.Count == 0)
+            else if (SubtitleListBox.Items.Count == 0)
             {
                 MessageBox.Show("자막 파일이 없습니다");
                 return;
             }
-            else if (listBox1.Items.Count != listBox2.Items.Count)
+            else if (MovieListBox.Items.Count != SubtitleListBox.Items.Count)
             {
                 MessageBox.Show("동영상과 자막 파일 개수는 동일해야 합니다");
                 return;
             }
 
-            for (int i = 0; i < listBox1.Items.Count; i++)
+            for (int i = 0; i < MovieListBox.Items.Count; i++)
             {
                 DialogResult dr;
-                string movieFileName = listBox1.Items[i].ToString();
-                string subtitleFileName = listBox2.Items[i].ToString();
+                string movieFileName = MovieListBox.Items[i].ToString();
+                string subtitleFileName = SubtitleListBox.Items[i].ToString();
                 string subtitleNewFileName = Path.Combine(Path.GetDirectoryName(movieFileName),
                     Path.GetFileNameWithoutExtension(movieFileName) + Path.GetExtension(subtitleFileName));
 
                 if (Path.GetExtension(subtitleFileName).ToLower() == ".zip")
                 {
-                    if (getSubtitleFileFromZip(ref subtitleFileName, ref subtitleNewFileName) == Result.Continue)
+                    if (GetSubtitleFileFromZip(ref subtitleFileName, ref subtitleNewFileName) == Result.Continue)
                     {
                         continue;
                     }
@@ -203,8 +198,8 @@ namespace SubtitleRenamer
             if (checkedListBox1.GetItemChecked(0))
             {
                 ProcessStartInfo startInfo = new ProcessStartInfo();
-                startInfo.FileName = Path.GetFileName(AssocQueryString(AssocStr.Executable, listBox1.Items[0].ToString()));
-                startInfo.Arguments = string.Join(" ", listBox1.Items.Cast<string>().ToList().Select(x => "\"" + x + "\""));
+                startInfo.FileName = Path.GetFileName(AssocQueryString(AssocStr.Executable, MovieListBox.Items[0].ToString()));
+                startInfo.Arguments = string.Join(" ", MovieListBox.Items.Cast<string>().ToList().Select(x => "\"" + x + "\""));
                 Process.Start(startInfo);
             }
             else
@@ -212,45 +207,45 @@ namespace SubtitleRenamer
                 MessageBox.Show("변환이 완료됐습니다");
             }
 
-            listBox1.Items.Clear();
-            listBox2.Items.Clear();
+            MovieListBox.Items.Clear();
+            SubtitleListBox.Items.Clear();
         }
 
-        private void listBox1_DragEnter(object sender, DragEventArgs e)
+        private void MovieListBox_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 e.Effect = DragDropEffects.Copy;
         }
 
-        private void listBox1_DragDrop(object sender, DragEventArgs e)
+        private void MovieListBox_DragDrop(object sender, DragEventArgs e)
         {
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
             foreach (string file in files)
-                listBox1.Items.Add(file);
+                MovieListBox.Items.Add(file);
             if (checkedListBox1.GetItemChecked(1))
             {
-                sortListBoxItems(ref listBox1);
+                sortListBoxItems(ref MovieListBox);
             }
         }
 
-        private void listBox2_DragEnter(object sender, DragEventArgs e)
+        private void SubtitleListBox_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 e.Effect = DragDropEffects.Copy;
         }
 
-        private void listBox2_DragDrop(object sender, DragEventArgs e)
+        private void SubtitleListBox_DragDrop(object sender, DragEventArgs e)
         {
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
             foreach (string file in files)
-                listBox2.Items.Add(file);
+                SubtitleListBox.Items.Add(file);
             if (checkedListBox1.GetItemChecked(1))
             {
-                sortListBoxItems(ref listBox2);
+                sortListBoxItems(ref SubtitleListBox);
             }
         }
 
-        private void moveUpListBoxItems(int index, ListBox listBox)
+        private void MoveUpListBoxItems(int index, ListBox listBox)
         {
             if (index < 0 || listBox.SelectedItems.Count < 1 || listBox.SelectedIndices[0] < 1)
             {
@@ -271,7 +266,7 @@ namespace SubtitleRenamer
             }
         }
 
-        private void moveDownListBoxItems(int index, ListBox listBox)
+        private void MoveDownListBoxItems(int index, ListBox listBox)
         {
             if (index > listBox.Items.Count - 1 || listBox.SelectedItems.Count < 1
                 || listBox.SelectedIndices.Cast<int>().ToList().Last() > listBox.Items.Count - 1)
@@ -296,14 +291,14 @@ namespace SubtitleRenamer
 
         private void MoveToTopButton1_Click(object sender, EventArgs e)
         {
-            moveUpListBoxItems(0, listBox1);
+            MoveUpListBoxItems(0, MovieListBox);
         }
 
         private void MoveUpButton1_Click(object sender, EventArgs e)
         {
             try
             {
-                moveUpListBoxItems(listBox1.SelectedIndices[0] - 1, listBox1);
+                MoveUpListBoxItems(MovieListBox.SelectedIndices[0] - 1, MovieListBox);
             }
             catch
             {
@@ -315,7 +310,7 @@ namespace SubtitleRenamer
         {
             try
             {
-                moveDownListBoxItems(listBox1.SelectedIndices.Cast<int>().ToList().Last() + 1, listBox1);
+                MoveDownListBoxItems(MovieListBox.SelectedIndices.Cast<int>().ToList().Last() + 1, MovieListBox);
             }
             catch
             {
@@ -325,19 +320,19 @@ namespace SubtitleRenamer
 
         private void MoveToBottomButton1_Click(object sender, EventArgs e)
         {
-            moveDownListBoxItems(listBox1.Items.Count - 1, listBox1);
+            MoveDownListBoxItems(MovieListBox.Items.Count - 1, MovieListBox);
         }
 
         private void MoveToTopButton2_Click(object sender, EventArgs e)
         {
-            moveUpListBoxItems(0, listBox2);
+            MoveUpListBoxItems(0, SubtitleListBox);
         }
 
         private void MoveUpButton2_Click(object sender, EventArgs e)
         {
             try
             {
-                moveUpListBoxItems(listBox2.SelectedIndices[0] - 1, listBox2);
+                MoveUpListBoxItems(SubtitleListBox.SelectedIndices[0] - 1, SubtitleListBox);
             }
             catch
             {
@@ -349,7 +344,7 @@ namespace SubtitleRenamer
         {
             try
             {
-                moveDownListBoxItems(listBox2.SelectedIndices.Cast<int>().ToList().Last() + 1, listBox2);
+                MoveDownListBoxItems(SubtitleListBox.SelectedIndices.Cast<int>().ToList().Last() + 1, SubtitleListBox);
             }
             catch
             {
@@ -359,7 +354,7 @@ namespace SubtitleRenamer
 
         private void MoveToBottomButton2_Click(object sender, EventArgs e)
         {
-            moveDownListBoxItems(listBox2.Items.Count - 1, listBox2);
+            MoveDownListBoxItems(SubtitleListBox.Items.Count - 1, SubtitleListBox);
         }
 
         private void sortListBoxItems(ref ListBox listBox, bool descending = false)
@@ -378,25 +373,25 @@ namespace SubtitleRenamer
 
         private void SortDescendingButton1_Click(object sender, EventArgs e)
         {
-            sortListBoxItems(ref listBox1, true);
+            sortListBoxItems(ref MovieListBox, true);
         }
 
         private void SortAscendingButton1_Click(object sender, EventArgs e)
         {
-            sortListBoxItems(ref listBox1);
+            sortListBoxItems(ref MovieListBox);
         }
 
         private void SortDescendingButton2_Click(object sender, EventArgs e)
         {
-            sortListBoxItems(ref listBox2, true);
+            sortListBoxItems(ref SubtitleListBox, true);
         }
 
         private void SortAscendingButton2_Click(object sender, EventArgs e)
         {
-            sortListBoxItems(ref listBox2);
+            sortListBoxItems(ref SubtitleListBox);
         }
 
-        private void informationMenuItem_Click(object sender, EventArgs e)
+        private void InformationMenuItem_Click(object sender, EventArgs e)
         {
             Form form2 = new HelpForm();
             form2.ShowDialog();

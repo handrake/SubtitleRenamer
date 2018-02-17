@@ -37,7 +37,7 @@
             this.DeleteFileButton1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.MovieListBox = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.MoveToTopButton1 = new System.Windows.Forms.Button();
             this.MoveUpButton1 = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@
             this.DeleteFileButton2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.SubtitleListBox = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.MoveToTopButton2 = new System.Windows.Forms.Button();
             this.MoveUpButton2 = new System.Windows.Forms.Button();
@@ -66,7 +66,7 @@
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.도움말ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.informationMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.InformationMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -191,7 +191,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel6.Controls.Add(this.listBox1, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.MovieListBox, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel10, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -202,21 +202,21 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(575, 414);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
-            // listBox1
+            // MovieListBox
             // 
-            this.listBox1.AllowDrop = true;
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.HorizontalScrollbar = true;
-            this.listBox1.ItemHeight = 24;
-            this.listBox1.Location = new System.Drawing.Point(67, 20);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(10, 20, 10, 0);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox1.Size = new System.Drawing.Size(440, 394);
-            this.listBox1.TabIndex = 3;
-            this.listBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox1_DragDrop);
-            this.listBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBox1_DragEnter);
+            this.MovieListBox.AllowDrop = true;
+            this.MovieListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MovieListBox.FormattingEnabled = true;
+            this.MovieListBox.HorizontalScrollbar = true;
+            this.MovieListBox.ItemHeight = 24;
+            this.MovieListBox.Location = new System.Drawing.Point(67, 20);
+            this.MovieListBox.Margin = new System.Windows.Forms.Padding(10, 20, 10, 0);
+            this.MovieListBox.Name = "MovieListBox";
+            this.MovieListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.MovieListBox.Size = new System.Drawing.Size(440, 394);
+            this.MovieListBox.TabIndex = 3;
+            this.MovieListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.MovieListBox_DragDrop);
+            this.MovieListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.MovieListBox_DragEnter);
             // 
             // tableLayoutPanel7
             // 
@@ -424,7 +424,7 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel8.Controls.Add(this.listBox2, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.SubtitleListBox, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel11, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -435,21 +435,21 @@
             this.tableLayoutPanel8.Size = new System.Drawing.Size(575, 414);
             this.tableLayoutPanel8.TabIndex = 2;
             // 
-            // listBox2
+            // SubtitleListBox
             // 
-            this.listBox2.AllowDrop = true;
-            this.listBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.HorizontalScrollbar = true;
-            this.listBox2.ItemHeight = 24;
-            this.listBox2.Location = new System.Drawing.Point(67, 20);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(10, 20, 10, 0);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox2.Size = new System.Drawing.Size(440, 394);
-            this.listBox2.TabIndex = 3;
-            this.listBox2.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox2_DragDrop);
-            this.listBox2.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBox2_DragEnter);
+            this.SubtitleListBox.AllowDrop = true;
+            this.SubtitleListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SubtitleListBox.FormattingEnabled = true;
+            this.SubtitleListBox.HorizontalScrollbar = true;
+            this.SubtitleListBox.ItemHeight = 24;
+            this.SubtitleListBox.Location = new System.Drawing.Point(67, 20);
+            this.SubtitleListBox.Margin = new System.Windows.Forms.Padding(10, 20, 10, 0);
+            this.SubtitleListBox.Name = "SubtitleListBox";
+            this.SubtitleListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.SubtitleListBox.Size = new System.Drawing.Size(440, 394);
+            this.SubtitleListBox.TabIndex = 3;
+            this.SubtitleListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.SubtitleListBox_DragDrop);
+            this.SubtitleListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.SubtitleListBox_DragEnter);
             // 
             // tableLayoutPanel9
             // 
@@ -602,18 +602,18 @@
             // 도움말ToolStripMenuItem
             // 
             this.도움말ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.informationMenuItem});
+            this.InformationMenuItem});
             this.도움말ToolStripMenuItem.Name = "도움말ToolStripMenuItem";
             this.도움말ToolStripMenuItem.Size = new System.Drawing.Size(99, 36);
             this.도움말ToolStripMenuItem.Text = "도움말";
             // 
-            // informationMenuItem
+            // InformationMenuItem
             // 
-            this.informationMenuItem.Name = "informationMenuItem";
-            this.informationMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.informationMenuItem.Size = new System.Drawing.Size(202, 38);
-            this.informationMenuItem.Text = "정보";
-            this.informationMenuItem.Click += new System.EventHandler(this.informationMenuItem_Click);
+            this.InformationMenuItem.Name = "InformationMenuItem";
+            this.InformationMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.InformationMenuItem.Size = new System.Drawing.Size(202, 38);
+            this.InformationMenuItem.Text = "정보";
+            this.InformationMenuItem.Click += new System.EventHandler(this.InformationMenuItem_Click);
             // 
             // MainForm
             // 
@@ -673,14 +673,14 @@
         private System.Windows.Forms.Button MoveDownButton1;
         private System.Windows.Forms.Button MoveToBottomButton1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox SubtitleListBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Button MoveToTopButton2;
         private System.Windows.Forms.Button MoveUpButton2;
         private System.Windows.Forms.Button MoveDownButton2;
         private System.Windows.Forms.Button MoveToBottomButton2;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox MovieListBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.Button SortDescendingButton1;
         private System.Windows.Forms.Button SortAscendingButton1;
@@ -689,7 +689,7 @@
         private System.Windows.Forms.Button SortAscendingButton2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 도움말ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem informationMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem InformationMenuItem;
     }
 }
 

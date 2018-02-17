@@ -118,26 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="SortDescendingButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAANRJREFUOE+lk8ENgzAQBCklJaSEiBbyQkoPtJASUoB7SAduJf7z4MfX8Vx8jjEX
-        CZSVVvh2bxcBoosx/kVTPMJDWJblDPP4QRLiThKeM78lCMMwxL7vTeKlHTjfHj7CVUk63L33ZhjiUUCw
-        uzqhVfIax3ETRmvDbYkWXEIImwI0CjRQh7mKp0jD0zlXwpzRWMp3KwUrTZGG0zRNpYAzGkuJPO+qoGg1
-        ELRAzbzIJ2wL5LNKUIFhFMiblrkqqL0CjLZAYRVsgFEzy4KfnvWDHKEp7mfs3o+PYA6BBbYDAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
-  <data name="SortAscendingButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAANZJREFUOE+lk8ENgzAQBF1KSkgJES3khZQeaCElpAD3kA5oJfz94MfX8Zx8lg2H
-        BMlKK+y9mxVEiosx/mUzPGMzPGO3LEv8xU6VLnPf97HrOtPM2BHo7sXrguc4jiaMmbFjFaTnVUs+wzBs
-        YDKWWRSoKsjZrAW3aZo2BWR5efMJJVOly9t7X2DOZCw9XvIZTUHJVOlyCSGUAs5kCgJogZ6bAkSgBTpM
-        z7mG6xJmAqp2CuTHWr8BGTMBVUDrAsQiAOAujIBq51gEkAxow0eUS1rY+oMcd3RfUrtmYjhoLFkAAAAA
-        SUVORK5CYII=
-</value>
-  </data>
   <data name="MoveToTopButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -218,6 +198,26 @@
         wwAADsMBx2+oZAAAAItJREFUOE+1kV0KgDAMg3e2HW7X8JTbqxpJIKwb1gcDgdImH/6UncYYp5vrvFCq
         tT5OA3rvB8ctwDNBCCqwAuDmsCAcBZkB2sGMR+HYWntCsAP8xniUSgo6ADvNjEd5SYV5fgV4eLaejPEo
         fagVRGX9pa1WkHRZcsinMoIZMx6Fo7/3yv8DMmb8VikXr2uTVOUFjQYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="SortDescendingButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAANRJREFUOE+lk8ENgzAQBCklJaSEiBbyQkoPtJASUoB7SAduJf7z4MfX8Vx8jjEX
+        CZSVVvh2bxcBoosx/kVTPMJDWJblDPP4QRLiThKeM78lCMMwxL7vTeKlHTjfHj7CVUk63L33ZhjiUUCw
+        uzqhVfIax3ETRmvDbYkWXEIImwI0CjRQh7mKp0jD0zlXwpzRWMp3KwUrTZGG0zRNpYAzGkuJPO+qoGg1
+        ELRAzbzIJ2wL5LNKUIFhFMiblrkqqL0CjLZAYRVsgFEzy4KfnvWDHKEp7mfs3o+PYA6BBbYDAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
+  <data name="SortAscendingButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAANZJREFUOE+lk8ENgzAQBF1KSkgJES3khZQeaCElpAD3kA5oJfz94MfX8Zx8lg2H
+        BMlKK+y9mxVEiosx/mUzPGMzPGO3LEv8xU6VLnPf97HrOtPM2BHo7sXrguc4jiaMmbFjFaTnVUs+wzBs
+        YDKWWRSoKsjZrAW3aZo2BWR5efMJJVOly9t7X2DOZCw9XvIZTUHJVOlyCSGUAs5kCgJogZ6bAkSgBTpM
+        z7mG6xJmAqp2CuTHWr8BGTMBVUDrAsQiAOAujIBq51gEkAxow0eUS1rY+oMcd3RfUrtmYjhoLFkAAAAA
+        SUVORK5CYII=
 </value>
   </data>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
