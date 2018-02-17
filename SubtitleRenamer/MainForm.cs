@@ -34,7 +34,7 @@ namespace SubtitleRenamer
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AddFileButton1_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "모든 파일|*.*";
@@ -55,20 +55,20 @@ namespace SubtitleRenamer
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void DeleteAllButton1_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void DeleteFileButton1_Click(object sender, EventArgs e)
         {
-            for (int i = listBox1.SelectedIndices.Count - 1; i >= 0 ; i--)
+            for (int i = listBox1.SelectedIndices.Count - 1; i >= 0; i--)
             {
                 listBox1.Items.RemoveAt(listBox1.SelectedIndices[i]);
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void AddFileButton2_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "모든 파일|*.*";
@@ -89,12 +89,12 @@ namespace SubtitleRenamer
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void DeleteAllButton2_Click(object sender, EventArgs e)
         {
             listBox2.Items.Clear();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void DeleteFileButton2_Click(object sender, EventArgs e)
         {
             for (int i = listBox2.SelectedIndices.Count - 1; i >= 0; i--)
             {
@@ -136,7 +136,7 @@ namespace SubtitleRenamer
             return Result.Ok;
         }
 
-        private void processButton_Click(object sender, EventArgs e)
+        private void ProcessButton_Click(object sender, EventArgs e)
         {
             Dictionary<string, string> deletedSubtitles = new Dictionary<string, string>();
 

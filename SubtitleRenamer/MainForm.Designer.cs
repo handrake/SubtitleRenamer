@@ -32,9 +32,9 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.AddFileButton1 = new System.Windows.Forms.Button();
+            this.DeleteAllButton1 = new System.Windows.Forms.Button();
+            this.DeleteFileButton1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -48,9 +48,9 @@
             this.button17 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.AddFileButton2 = new System.Windows.Forms.Button();
+            this.DeleteAllButton2 = new System.Windows.Forms.Button();
+            this.DeleteFileButton2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.listBox2 = new System.Windows.Forms.ListBox();
@@ -62,7 +62,7 @@
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
-            this.processButton = new System.Windows.Forms.Button();
+            this.ProcessButton = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.도움말ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,7 +88,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.processButton, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ProcessButton, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.checkedListBox1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 40);
@@ -124,9 +124,9 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.button1, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button2, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button3, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.AddFileButton1, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.DeleteAllButton1, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.DeleteFileButton1, 3, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 473);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -135,42 +135,42 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(575, 69);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // button1
+            // AddFileButton1
             // 
-            this.button1.AutoSize = true;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(95, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 63);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "파일 추가";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.AddFileButton1.AutoSize = true;
+            this.AddFileButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddFileButton1.Location = new System.Drawing.Point(95, 3);
+            this.AddFileButton1.Name = "AddFileButton1";
+            this.AddFileButton1.Size = new System.Drawing.Size(124, 63);
+            this.AddFileButton1.TabIndex = 0;
+            this.AddFileButton1.Text = "파일 추가";
+            this.AddFileButton1.UseVisualStyleBackColor = true;
+            this.AddFileButton1.Click += new System.EventHandler(this.AddFileButton1_Click);
             // 
-            // button2
+            // DeleteAllButton1
             // 
-            this.button2.AutoSize = true;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(225, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 63);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "전체 삭제";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.DeleteAllButton1.AutoSize = true;
+            this.DeleteAllButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DeleteAllButton1.Location = new System.Drawing.Point(225, 3);
+            this.DeleteAllButton1.Name = "DeleteAllButton1";
+            this.DeleteAllButton1.Size = new System.Drawing.Size(124, 63);
+            this.DeleteAllButton1.TabIndex = 1;
+            this.DeleteAllButton1.Text = "전체 삭제";
+            this.DeleteAllButton1.UseVisualStyleBackColor = true;
+            this.DeleteAllButton1.Click += new System.EventHandler(this.DeleteAllButton1_Click);
             // 
-            // button3
+            // DeleteFileButton1
             // 
-            this.button3.AutoSize = true;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(355, 3);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button3.Size = new System.Drawing.Size(124, 63);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "삭제";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.DeleteFileButton1.AutoSize = true;
+            this.DeleteFileButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DeleteFileButton1.Location = new System.Drawing.Point(355, 3);
+            this.DeleteFileButton1.Name = "DeleteFileButton1";
+            this.DeleteFileButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DeleteFileButton1.Size = new System.Drawing.Size(124, 63);
+            this.DeleteFileButton1.TabIndex = 2;
+            this.DeleteFileButton1.Text = "삭제";
+            this.DeleteFileButton1.UseVisualStyleBackColor = true;
+            this.DeleteFileButton1.Click += new System.EventHandler(this.DeleteFileButton1_Click);
             // 
             // label1
             // 
@@ -357,9 +357,9 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.button4, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button5, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button6, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.AddFileButton2, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.DeleteAllButton2, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.DeleteFileButton2, 3, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 473);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -368,41 +368,41 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(575, 69);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
-            // button4
+            // AddFileButton2
             // 
-            this.button4.AutoSize = true;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(95, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(124, 63);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "파일 추가";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.AddFileButton2.AutoSize = true;
+            this.AddFileButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddFileButton2.Location = new System.Drawing.Point(95, 3);
+            this.AddFileButton2.Name = "AddFileButton2";
+            this.AddFileButton2.Size = new System.Drawing.Size(124, 63);
+            this.AddFileButton2.TabIndex = 0;
+            this.AddFileButton2.Text = "파일 추가";
+            this.AddFileButton2.UseVisualStyleBackColor = true;
+            this.AddFileButton2.Click += new System.EventHandler(this.AddFileButton2_Click);
             // 
-            // button5
+            // DeleteAllButton2
             // 
-            this.button5.AutoSize = true;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Location = new System.Drawing.Point(225, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(124, 63);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "전체 삭제";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.DeleteAllButton2.AutoSize = true;
+            this.DeleteAllButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DeleteAllButton2.Location = new System.Drawing.Point(225, 3);
+            this.DeleteAllButton2.Name = "DeleteAllButton2";
+            this.DeleteAllButton2.Size = new System.Drawing.Size(124, 63);
+            this.DeleteAllButton2.TabIndex = 1;
+            this.DeleteAllButton2.Text = "전체 삭제";
+            this.DeleteAllButton2.UseVisualStyleBackColor = true;
+            this.DeleteAllButton2.Click += new System.EventHandler(this.DeleteAllButton2_Click);
             // 
-            // button6
+            // DeleteFileButton2
             // 
-            this.button6.AutoSize = true;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.Location = new System.Drawing.Point(355, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(124, 63);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "  삭제  ";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.DeleteFileButton2.AutoSize = true;
+            this.DeleteFileButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DeleteFileButton2.Location = new System.Drawing.Point(355, 3);
+            this.DeleteFileButton2.Name = "DeleteFileButton2";
+            this.DeleteFileButton2.Size = new System.Drawing.Size(124, 63);
+            this.DeleteFileButton2.TabIndex = 2;
+            this.DeleteFileButton2.Text = "  삭제  ";
+            this.DeleteFileButton2.UseVisualStyleBackColor = true;
+            this.DeleteFileButton2.Click += new System.EventHandler(this.DeleteFileButton2_Click);
             // 
             // label2
             // 
@@ -563,16 +563,16 @@
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
-            // processButton
+            // ProcessButton
             // 
-            this.processButton.Location = new System.Drawing.Point(787, 581);
-            this.processButton.Margin = new System.Windows.Forms.Padding(200, 30, 200, 30);
-            this.processButton.Name = "processButton";
-            this.processButton.Size = new System.Drawing.Size(187, 78);
-            this.processButton.TabIndex = 3;
-            this.processButton.Text = "변환";
-            this.processButton.UseVisualStyleBackColor = true;
-            this.processButton.Click += new System.EventHandler(this.processButton_Click);
+            this.ProcessButton.Location = new System.Drawing.Point(787, 581);
+            this.ProcessButton.Margin = new System.Windows.Forms.Padding(200, 30, 200, 30);
+            this.ProcessButton.Name = "ProcessButton";
+            this.ProcessButton.Size = new System.Drawing.Size(187, 78);
+            this.ProcessButton.TabIndex = 3;
+            this.ProcessButton.Text = "변환";
+            this.ProcessButton.UseVisualStyleBackColor = true;
+            this.ProcessButton.Click += new System.EventHandler(this.ProcessButton_Click);
             // 
             // checkedListBox1
             // 
@@ -656,16 +656,16 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button AddFileButton1;
+        private System.Windows.Forms.Button DeleteAllButton1;
+        private System.Windows.Forms.Button DeleteFileButton1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button AddFileButton2;
+        private System.Windows.Forms.Button DeleteAllButton2;
+        private System.Windows.Forms.Button DeleteFileButton2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button processButton;
+        private System.Windows.Forms.Button ProcessButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Button button8;
