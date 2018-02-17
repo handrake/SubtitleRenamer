@@ -45,7 +45,7 @@ namespace SubtitleRenamer
                 }
                 if (checkedListBox1.GetItemChecked(1))
                 {
-                    sortListBoxItems(ref MovieListBox);
+                    SortListBoxItems(ref MovieListBox);
                 }
             }
         }
@@ -79,7 +79,7 @@ namespace SubtitleRenamer
                 }
                 if (checkedListBox1.GetItemChecked(1))
                 {
-                    sortListBoxItems(ref SubtitleListBox);
+                    SortListBoxItems(ref SubtitleListBox);
                 }
             }
         }
@@ -224,7 +224,7 @@ namespace SubtitleRenamer
                 MovieListBox.Items.Add(file);
             if (checkedListBox1.GetItemChecked(1))
             {
-                sortListBoxItems(ref MovieListBox);
+                SortListBoxItems(ref MovieListBox);
             }
         }
 
@@ -241,7 +241,7 @@ namespace SubtitleRenamer
                 SubtitleListBox.Items.Add(file);
             if (checkedListBox1.GetItemChecked(1))
             {
-                sortListBoxItems(ref SubtitleListBox);
+                SortListBoxItems(ref SubtitleListBox);
             }
         }
 
@@ -357,7 +357,7 @@ namespace SubtitleRenamer
             MoveDownListBoxItems(SubtitleListBox.Items.Count - 1, SubtitleListBox);
         }
 
-        private void sortListBoxItems(ref ListBox listBox, bool descending = false)
+        private void SortListBoxItems(ref ListBox listBox, bool descending = false)
         {
             var listItems = listBox.Items.Cast<string>().ToList();
             listBox.Items.Clear();
@@ -373,22 +373,22 @@ namespace SubtitleRenamer
 
         private void SortDescendingButton1_Click(object sender, EventArgs e)
         {
-            sortListBoxItems(ref MovieListBox, true);
+            SortListBoxItems(ref MovieListBox, true);
         }
 
         private void SortAscendingButton1_Click(object sender, EventArgs e)
         {
-            sortListBoxItems(ref MovieListBox);
+            SortListBoxItems(ref MovieListBox);
         }
 
         private void SortDescendingButton2_Click(object sender, EventArgs e)
         {
-            sortListBoxItems(ref SubtitleListBox, true);
+            SortListBoxItems(ref SubtitleListBox, true);
         }
 
         private void SortAscendingButton2_Click(object sender, EventArgs e)
         {
-            sortListBoxItems(ref SubtitleListBox);
+            SortListBoxItems(ref SubtitleListBox);
         }
 
         private void InformationMenuItem_Click(object sender, EventArgs e)
