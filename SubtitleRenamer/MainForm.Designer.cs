@@ -39,13 +39,13 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.MoveToTopButton1 = new System.Windows.Forms.Button();
+            this.MoveUpButton1 = new System.Windows.Forms.Button();
+            this.MoveDownButton1 = new System.Windows.Forms.Button();
+            this.MoveToBottomButton1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
+            this.SortDescendingButton1 = new System.Windows.Forms.Button();
+            this.SortAscendingButton1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.AddFileButton2 = new System.Windows.Forms.Button();
@@ -55,13 +55,13 @@
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.MoveToTopButton2 = new System.Windows.Forms.Button();
+            this.MoveUpButton2 = new System.Windows.Forms.Button();
+            this.MoveDownButton2 = new System.Windows.Forms.Button();
+            this.MoveToBottomButton2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
+            this.SortDescendingButton2 = new System.Windows.Forms.Button();
+            this.SortAscendingButton2 = new System.Windows.Forms.Button();
             this.ProcessButton = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -223,10 +223,10 @@
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Controls.Add(this.button8, 0, 2);
-            this.tableLayoutPanel7.Controls.Add(this.button9, 0, 3);
-            this.tableLayoutPanel7.Controls.Add(this.button10, 0, 4);
-            this.tableLayoutPanel7.Controls.Add(this.button11, 0, 5);
+            this.tableLayoutPanel7.Controls.Add(this.MoveToTopButton1, 0, 2);
+            this.tableLayoutPanel7.Controls.Add(this.MoveUpButton1, 0, 3);
+            this.tableLayoutPanel7.Controls.Add(this.MoveDownButton1, 0, 4);
+            this.tableLayoutPanel7.Controls.Add(this.MoveToBottomButton1, 0, 5);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(520, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -242,58 +242,58 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(52, 408);
             this.tableLayoutPanel7.TabIndex = 4;
             // 
-            // button8
+            // MoveToTopButton1
             // 
-            this.button8.AutoSize = true;
-            this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(3, 105);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(46, 45);
-            this.button8.TabIndex = 5;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.MoveToTopButton1.AutoSize = true;
+            this.MoveToTopButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MoveToTopButton1.Image = ((System.Drawing.Image)(resources.GetObject("MoveToTopButton1.Image")));
+            this.MoveToTopButton1.Location = new System.Drawing.Point(3, 105);
+            this.MoveToTopButton1.Name = "MoveToTopButton1";
+            this.MoveToTopButton1.Size = new System.Drawing.Size(46, 45);
+            this.MoveToTopButton1.TabIndex = 5;
+            this.MoveToTopButton1.UseVisualStyleBackColor = true;
+            this.MoveToTopButton1.Click += new System.EventHandler(this.MoveToTopButton1_Click);
             // 
-            // button9
+            // MoveUpButton1
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(3, 156);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(46, 45);
-            this.button9.TabIndex = 6;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.MoveUpButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MoveUpButton1.Image = ((System.Drawing.Image)(resources.GetObject("MoveUpButton1.Image")));
+            this.MoveUpButton1.Location = new System.Drawing.Point(3, 156);
+            this.MoveUpButton1.Name = "MoveUpButton1";
+            this.MoveUpButton1.Size = new System.Drawing.Size(46, 45);
+            this.MoveUpButton1.TabIndex = 6;
+            this.MoveUpButton1.UseVisualStyleBackColor = true;
+            this.MoveUpButton1.Click += new System.EventHandler(this.MoveUpButton1_Click);
             // 
-            // button10
+            // MoveDownButton1
             // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.Location = new System.Drawing.Point(3, 207);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(46, 45);
-            this.button10.TabIndex = 7;
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.MoveDownButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MoveDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("MoveDownButton1.Image")));
+            this.MoveDownButton1.Location = new System.Drawing.Point(3, 207);
+            this.MoveDownButton1.Name = "MoveDownButton1";
+            this.MoveDownButton1.Size = new System.Drawing.Size(46, 45);
+            this.MoveDownButton1.TabIndex = 7;
+            this.MoveDownButton1.UseVisualStyleBackColor = true;
+            this.MoveDownButton1.Click += new System.EventHandler(this.MoveDownButton1_Click);
             // 
-            // button11
+            // MoveToBottomButton1
             // 
-            this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(3, 258);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(46, 45);
-            this.button11.TabIndex = 8;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.MoveToBottomButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MoveToBottomButton1.Image = ((System.Drawing.Image)(resources.GetObject("MoveToBottomButton1.Image")));
+            this.MoveToBottomButton1.Location = new System.Drawing.Point(3, 258);
+            this.MoveToBottomButton1.Name = "MoveToBottomButton1";
+            this.MoveToBottomButton1.Size = new System.Drawing.Size(46, 45);
+            this.MoveToBottomButton1.TabIndex = 8;
+            this.MoveToBottomButton1.UseVisualStyleBackColor = true;
+            this.MoveToBottomButton1.Click += new System.EventHandler(this.MoveToBottomButton1_Click);
             // 
             // tableLayoutPanel10
             // 
             this.tableLayoutPanel10.ColumnCount = 1;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel10.Controls.Add(this.button16, 0, 3);
-            this.tableLayoutPanel10.Controls.Add(this.button17, 0, 4);
+            this.tableLayoutPanel10.Controls.Add(this.SortDescendingButton1, 0, 3);
+            this.tableLayoutPanel10.Controls.Add(this.SortAscendingButton1, 0, 4);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
@@ -309,28 +309,28 @@
             this.tableLayoutPanel10.Size = new System.Drawing.Size(51, 408);
             this.tableLayoutPanel10.TabIndex = 5;
             // 
-            // button16
+            // SortDescendingButton1
             // 
-            this.button16.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button16.Image = ((System.Drawing.Image)(resources.GetObject("button16.Image")));
-            this.button16.Location = new System.Drawing.Point(3, 156);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(45, 45);
-            this.button16.TabIndex = 0;
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.SortDescendingButton1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SortDescendingButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortDescendingButton1.Image = ((System.Drawing.Image)(resources.GetObject("SortDescendingButton1.Image")));
+            this.SortDescendingButton1.Location = new System.Drawing.Point(3, 156);
+            this.SortDescendingButton1.Name = "SortDescendingButton1";
+            this.SortDescendingButton1.Size = new System.Drawing.Size(45, 45);
+            this.SortDescendingButton1.TabIndex = 0;
+            this.SortDescendingButton1.UseVisualStyleBackColor = true;
+            this.SortDescendingButton1.Click += new System.EventHandler(this.SortDescendingButton1_Click);
             // 
-            // button17
+            // SortAscendingButton1
             // 
-            this.button17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button17.Image = ((System.Drawing.Image)(resources.GetObject("button17.Image")));
-            this.button17.Location = new System.Drawing.Point(3, 207);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(45, 45);
-            this.button17.TabIndex = 1;
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.SortAscendingButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortAscendingButton1.Image = ((System.Drawing.Image)(resources.GetObject("SortAscendingButton1.Image")));
+            this.SortAscendingButton1.Location = new System.Drawing.Point(3, 207);
+            this.SortAscendingButton1.Name = "SortAscendingButton1";
+            this.SortAscendingButton1.Size = new System.Drawing.Size(45, 45);
+            this.SortAscendingButton1.TabIndex = 1;
+            this.SortAscendingButton1.UseVisualStyleBackColor = true;
+            this.SortAscendingButton1.Click += new System.EventHandler(this.SortAscendingButton1_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -456,10 +456,10 @@
             this.tableLayoutPanel9.ColumnCount = 1;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel9.Controls.Add(this.button12, 0, 2);
-            this.tableLayoutPanel9.Controls.Add(this.button13, 0, 3);
-            this.tableLayoutPanel9.Controls.Add(this.button14, 0, 4);
-            this.tableLayoutPanel9.Controls.Add(this.button15, 0, 5);
+            this.tableLayoutPanel9.Controls.Add(this.MoveToTopButton2, 0, 2);
+            this.tableLayoutPanel9.Controls.Add(this.MoveUpButton2, 0, 3);
+            this.tableLayoutPanel9.Controls.Add(this.MoveDownButton2, 0, 4);
+            this.tableLayoutPanel9.Controls.Add(this.MoveToBottomButton2, 0, 5);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(520, 3);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -475,57 +475,57 @@
             this.tableLayoutPanel9.Size = new System.Drawing.Size(52, 408);
             this.tableLayoutPanel9.TabIndex = 4;
             // 
-            // button12
+            // MoveToTopButton2
             // 
-            this.button12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(3, 105);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(46, 45);
-            this.button12.TabIndex = 0;
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.MoveToTopButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MoveToTopButton2.Image = ((System.Drawing.Image)(resources.GetObject("MoveToTopButton2.Image")));
+            this.MoveToTopButton2.Location = new System.Drawing.Point(3, 105);
+            this.MoveToTopButton2.Name = "MoveToTopButton2";
+            this.MoveToTopButton2.Size = new System.Drawing.Size(46, 45);
+            this.MoveToTopButton2.TabIndex = 0;
+            this.MoveToTopButton2.UseVisualStyleBackColor = true;
+            this.MoveToTopButton2.Click += new System.EventHandler(this.MoveToTopButton2_Click);
             // 
-            // button13
+            // MoveUpButton2
             // 
-            this.button13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.Location = new System.Drawing.Point(3, 156);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(46, 45);
-            this.button13.TabIndex = 1;
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.MoveUpButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MoveUpButton2.Image = ((System.Drawing.Image)(resources.GetObject("MoveUpButton2.Image")));
+            this.MoveUpButton2.Location = new System.Drawing.Point(3, 156);
+            this.MoveUpButton2.Name = "MoveUpButton2";
+            this.MoveUpButton2.Size = new System.Drawing.Size(46, 45);
+            this.MoveUpButton2.TabIndex = 1;
+            this.MoveUpButton2.UseVisualStyleBackColor = true;
+            this.MoveUpButton2.Click += new System.EventHandler(this.MoveUpButton2_Click);
             // 
-            // button14
+            // MoveDownButton2
             // 
-            this.button14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
-            this.button14.Location = new System.Drawing.Point(3, 207);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(46, 45);
-            this.button14.TabIndex = 2;
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.MoveDownButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MoveDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("MoveDownButton2.Image")));
+            this.MoveDownButton2.Location = new System.Drawing.Point(3, 207);
+            this.MoveDownButton2.Name = "MoveDownButton2";
+            this.MoveDownButton2.Size = new System.Drawing.Size(46, 45);
+            this.MoveDownButton2.TabIndex = 2;
+            this.MoveDownButton2.UseVisualStyleBackColor = true;
+            this.MoveDownButton2.Click += new System.EventHandler(this.MoveDownButton2_Click);
             // 
-            // button15
+            // MoveToBottomButton2
             // 
-            this.button15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
-            this.button15.Location = new System.Drawing.Point(3, 258);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(46, 45);
-            this.button15.TabIndex = 3;
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.MoveToBottomButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MoveToBottomButton2.Image = ((System.Drawing.Image)(resources.GetObject("MoveToBottomButton2.Image")));
+            this.MoveToBottomButton2.Location = new System.Drawing.Point(3, 258);
+            this.MoveToBottomButton2.Name = "MoveToBottomButton2";
+            this.MoveToBottomButton2.Size = new System.Drawing.Size(46, 45);
+            this.MoveToBottomButton2.TabIndex = 3;
+            this.MoveToBottomButton2.UseVisualStyleBackColor = true;
+            this.MoveToBottomButton2.Click += new System.EventHandler(this.MoveToBottomButton2_Click);
             // 
             // tableLayoutPanel11
             // 
             this.tableLayoutPanel11.ColumnCount = 1;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel11.Controls.Add(this.button18, 0, 3);
-            this.tableLayoutPanel11.Controls.Add(this.button19, 0, 4);
+            this.tableLayoutPanel11.Controls.Add(this.SortDescendingButton2, 0, 3);
+            this.tableLayoutPanel11.Controls.Add(this.SortAscendingButton2, 0, 4);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
@@ -541,27 +541,27 @@
             this.tableLayoutPanel11.Size = new System.Drawing.Size(51, 408);
             this.tableLayoutPanel11.TabIndex = 5;
             // 
-            // button18
+            // SortDescendingButton2
             // 
-            this.button18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button18.Image = ((System.Drawing.Image)(resources.GetObject("button18.Image")));
-            this.button18.Location = new System.Drawing.Point(3, 156);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(45, 45);
-            this.button18.TabIndex = 0;
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.SortDescendingButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortDescendingButton2.Image = ((System.Drawing.Image)(resources.GetObject("SortDescendingButton2.Image")));
+            this.SortDescendingButton2.Location = new System.Drawing.Point(3, 156);
+            this.SortDescendingButton2.Name = "SortDescendingButton2";
+            this.SortDescendingButton2.Size = new System.Drawing.Size(45, 45);
+            this.SortDescendingButton2.TabIndex = 0;
+            this.SortDescendingButton2.UseVisualStyleBackColor = true;
+            this.SortDescendingButton2.Click += new System.EventHandler(this.SortDescendingButton2_Click);
             // 
-            // button19
+            // SortAscendingButton2
             // 
-            this.button19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button19.Image = ((System.Drawing.Image)(resources.GetObject("button19.Image")));
-            this.button19.Location = new System.Drawing.Point(3, 207);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(45, 45);
-            this.button19.TabIndex = 1;
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.SortAscendingButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortAscendingButton2.Image = ((System.Drawing.Image)(resources.GetObject("SortAscendingButton2.Image")));
+            this.SortAscendingButton2.Location = new System.Drawing.Point(3, 207);
+            this.SortAscendingButton2.Name = "SortAscendingButton2";
+            this.SortAscendingButton2.Size = new System.Drawing.Size(45, 45);
+            this.SortAscendingButton2.TabIndex = 1;
+            this.SortAscendingButton2.UseVisualStyleBackColor = true;
+            this.SortAscendingButton2.Click += new System.EventHandler(this.SortAscendingButton2_Click);
             // 
             // ProcessButton
             // 
@@ -668,25 +668,25 @@
         private System.Windows.Forms.Button ProcessButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button MoveToTopButton1;
+        private System.Windows.Forms.Button MoveUpButton1;
+        private System.Windows.Forms.Button MoveDownButton1;
+        private System.Windows.Forms.Button MoveToBottomButton1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button MoveToTopButton2;
+        private System.Windows.Forms.Button MoveUpButton2;
+        private System.Windows.Forms.Button MoveDownButton2;
+        private System.Windows.Forms.Button MoveToBottomButton2;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button SortDescendingButton1;
+        private System.Windows.Forms.Button SortAscendingButton1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button SortDescendingButton2;
+        private System.Windows.Forms.Button SortAscendingButton2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 도움말ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informationMenuItem;

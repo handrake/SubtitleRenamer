@@ -294,12 +294,12 @@ namespace SubtitleRenamer
             }
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void MoveToTopButton1_Click(object sender, EventArgs e)
         {
             moveUpListBoxItems(0, listBox1);
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void MoveUpButton1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -311,7 +311,7 @@ namespace SubtitleRenamer
             }
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void MoveDownButton1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -323,17 +323,17 @@ namespace SubtitleRenamer
             }
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void MoveToBottomButton1_Click(object sender, EventArgs e)
         {
             moveDownListBoxItems(listBox1.Items.Count - 1, listBox1);
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void MoveToTopButton2_Click(object sender, EventArgs e)
         {
             moveUpListBoxItems(0, listBox2);
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void MoveUpButton2_Click(object sender, EventArgs e)
         {
             try
             {
@@ -345,7 +345,7 @@ namespace SubtitleRenamer
             }
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void MoveDownButton2_Click(object sender, EventArgs e)
         {
             try
             {
@@ -357,7 +357,7 @@ namespace SubtitleRenamer
             }
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void MoveToBottomButton2_Click(object sender, EventArgs e)
         {
             moveDownListBoxItems(listBox2.Items.Count - 1, listBox2);
         }
@@ -376,22 +376,22 @@ namespace SubtitleRenamer
             }
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void SortDescendingButton1_Click(object sender, EventArgs e)
         {
             sortListBoxItems(ref listBox1, true);
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void SortAscendingButton1_Click(object sender, EventArgs e)
         {
             sortListBoxItems(ref listBox1);
         }
 
-        private void button18_Click(object sender, EventArgs e)
+        private void SortDescendingButton2_Click(object sender, EventArgs e)
         {
             sortListBoxItems(ref listBox2, true);
         }
 
-        private void button19_Click(object sender, EventArgs e)
+        private void SortAscendingButton2_Click(object sender, EventArgs e)
         {
             sortListBoxItems(ref listBox2);
         }
