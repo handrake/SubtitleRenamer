@@ -104,21 +104,33 @@ namespace SubtitleRenamer
                 using (ZipArchive archive = ZipFile.Open(subtitleFileName, ZipArchiveMode.Read))
                 {
                     List<string> zipFileNames = new List<string>();
+                    string selectedSubtitleFileName;
                     foreach (var entry in archive.Entries)
                     {
                         zipFileNames.Add(entry.FullName);
                     }
-                    ZipFilesForm zipFilesForm = new ZipFilesForm(zipFileNames);
-                    zipFilesForm.ShowDialog();
 
-                    if (!zipFilesForm.ok)
+                    if (zipFileNames.Count() != 1)
                     {
-                        return Result.Continue;
+                        ZipFilesForm zipFilesForm = new ZipFilesForm(zipFileNames);
+                        zipFilesForm.ShowDialog();
+
+                        if (!zipFilesForm.ok)
+                        {
+                            return Result.Continue;
+                        }
+
+                        selectedSubtitleFileName = zipFilesForm.selectedSubtitleFileName;
                     }
-                    string selectedFileExtension = Path.GetExtension(zipFilesForm.selectedSubtitleFileName);
+                    else
+                    {
+                        selectedSubtitleFileName = zipFileNames[0];
+                    }
+
+                    string selectedFileExtension = Path.GetExtension(selectedSubtitleFileName);
                     subtitleFileName = Path.Combine(Path.GetTempPath(),
                         Path.GetFileNameWithoutExtension(Path.GetRandomFileName()) + selectedFileExtension);
-                    archive.GetEntry(zipFilesForm.selectedSubtitleFileName).ExtractToFile(subtitleFileName);
+                    archive.GetEntry(selectedSubtitleFileName).ExtractToFile(subtitleFileName);
                     subtitleNewFileName = Path.Combine(Path.GetDirectoryName(subtitleNewFileName),
                         Path.GetFileNameWithoutExtension(subtitleNewFileName) + selectedFileExtension);
                 }
