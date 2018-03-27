@@ -587,6 +587,7 @@
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(487, 98);
             this.checkedListBox1.TabIndex = 4;
+            this.checkedListBox1.CheckOnClick = true;
             // 
             // menuStrip1
             // 
