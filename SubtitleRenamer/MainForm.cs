@@ -5,6 +5,7 @@ using System.IO.Compression;
 using System.Collections.Generic;
 using System.Linq;
 using System.Diagnostics;
+using System.Configuration;
 
 using static SubtitleRenamer.NativeMethods;
 
@@ -26,7 +27,36 @@ namespace SubtitleRenamer
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            var appSettings = ConfigurationManager.AppSettings;
+            checkedListBox1.SetItemChecked(0, Convert.ToBoolean(appSettings["playAfterConversion"]));
+            checkedListBox1.SetItemChecked(1, Convert.ToBoolean(appSettings["autoSort"]));
+        }
 
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            var configSettings = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            var settings = configSettings.AppSettings.Settings;
+
+            if (settings["playAfterConversion"] == null)
+            {
+                settings.Add("playAfterConversion", checkedListBox1.GetItemChecked(0).ToString());
+            }
+            else
+            {
+                settings["playAfterConversion"].Value = checkedListBox1.GetItemChecked(0).ToString();
+            }
+
+            if (settings["autoSort"] == null)
+            {
+                settings.Add("autoSort", checkedListBox1.GetItemChecked(1).ToString());
+            }
+            else
+            {
+                settings["autoSort"].Value = checkedListBox1.GetItemChecked(1).ToString();
+            }
+
+            configSettings.Save(ConfigurationSaveMode.Minimal, true);
+            ConfigurationManager.RefreshSection("appSettings");
         }
 
         private void AddFileButton1_Click(object sender, EventArgs e)
