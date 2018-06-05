@@ -29,7 +29,7 @@ namespace SubtitleRenamer
 
         private void SubtitleSelected()
         {
-            if (ZipListBox.Items.Count == 0)
+            if (ZipListBox.SelectedItems.Count == 0)
             {
                 MessageBox.Show("자막 파일을 선택하세요");
                 return;
