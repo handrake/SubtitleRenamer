@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="C560E108-E2C2-4F1B-9586-B661E3695117"
+             Name="SubtitleRenamer"
+             Language="1033"
+             Version="0.0.9"
+             Manufacturer="handrake"
+             UpgradeCode="DA7905A4-D327-42C4-BBF3-FED36422E55F">
+
+        <Package Compressed="yes"/>
+
+        <Media Id="1" Cabinet="product.cab" EmbedCab="yes"/>
+
+        <Directory Name="#1919" Id="_1">
+            <Directory Name="Subtitle Renamer" Id="_2">
+            </Directory>
+        </Directory>
+        <Directory Name="SourceDir" Id="TARGETDIR">
+            <Directory Name="ProgramFilesFolder" Id="ProgramFilesFolder">
+                <Directory Name="handrake" Id="_3">
+                    <Directory Name="SubtitleRenamer" Id="_4">
+                        <Component Id="_1" Guid="3C67513D-01DD-4637-8A68-80971EB9504F">
+                            <File Source="..\SubtitleRenamer\closed-caption-logo.ico"/>
+                            <File Source="System.IO.Compression.dll"/>
+                            <File Source="System.IO.Compression.FileSystem.dll"/>
+                            <File Source="System.Net.Http.dll"/>
+                        </Component>
+                    </Directory>
+                </Directory>
+            </Directory>
+        </Directory>
+
+        <Feature Id="_1" Level="1">
+            <ComponentRef Id="_1"/>
+        </Feature>
+
+    </Product>
+</Wix>
