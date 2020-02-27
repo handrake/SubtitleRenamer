@@ -206,14 +206,51 @@ namespace SubtitleRenamer
                         continue;
                     }
                     deletedSubtitles.Add(subtitleNewFileName, Path.Combine(Path.GetTempPath(), Path.GetRandomFileName()));
-                    File.Copy(subtitleNewFileName, deletedSubtitles[subtitleNewFileName], true);
+
+                    try
+                    {
+                        File.Copy(subtitleNewFileName, deletedSubtitles[subtitleNewFileName], true);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(string.Format("{0} 파일을 복사할 수 없습니다.", Path.GetFileName(subtitleFileName)));
+                    }
                 }
                 if (deletedSubtitles.ContainsKey(subtitleFileName))
                 {
                     subtitleFileName = deletedSubtitles[subtitleFileName];
                 }
-                File.Copy(subtitleFileName, subtitleNewFileName, true);
-                File.Delete(subtitleFileName);
+
+                string subtitleNewTempFileName = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+
+                File.Copy(subtitleFileName, subtitleNewTempFileName, true);
+                FileAttributes tempFileAttributes = File.GetAttributes(subtitleNewTempFileName);
+
+                if ((tempFileAttributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly)
+                {
+                    tempFileAttributes = tempFileAttributes & ~FileAttributes.ReadOnly;
+                    File.SetAttributes(subtitleNewTempFileName, tempFileAttributes);
+                }
+
+                try
+                {
+                    File.Delete(subtitleFileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(string.Format("{0}을 삭제할 수 없습니다.", subtitleFileName));
+                    File.Delete(subtitleNewTempFileName);
+                    return;
+                }
+
+                try
+                {
+                    File.Move(subtitleNewTempFileName, subtitleNewFileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(string.Format("{0} 파일을 복사할 수 없습니다.", Path.GetFileName(subtitleNewFileName)));
+                }
             }
 
             if (checkedListBox1.GetItemChecked(0))
