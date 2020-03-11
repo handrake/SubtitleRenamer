@@ -83,6 +83,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -91,12 +92,13 @@
             this.tableLayoutPanel1.Controls.Add(this.ProcessButton, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.checkedListBox1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 40);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 24);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1174, 689);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(632, 340);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -108,12 +110,13 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(581, 545);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(310, 265);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel4
@@ -128,20 +131,22 @@
             this.tableLayoutPanel4.Controls.Add(this.DeleteAllButton1, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.DeleteFileButton1, 3, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 473);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 231);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(575, 69);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(306, 32);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // AddFileButton1
             // 
             this.AddFileButton1.AutoSize = true;
             this.AddFileButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddFileButton1.Location = new System.Drawing.Point(95, 3);
+            this.AddFileButton1.Location = new System.Drawing.Point(48, 2);
+            this.AddFileButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddFileButton1.Name = "AddFileButton1";
-            this.AddFileButton1.Size = new System.Drawing.Size(124, 63);
+            this.AddFileButton1.Size = new System.Drawing.Size(67, 28);
             this.AddFileButton1.TabIndex = 0;
             this.AddFileButton1.Text = "파일 추가";
             this.AddFileButton1.UseVisualStyleBackColor = true;
@@ -151,9 +156,10 @@
             // 
             this.DeleteAllButton1.AutoSize = true;
             this.DeleteAllButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DeleteAllButton1.Location = new System.Drawing.Point(225, 3);
+            this.DeleteAllButton1.Location = new System.Drawing.Point(119, 2);
+            this.DeleteAllButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteAllButton1.Name = "DeleteAllButton1";
-            this.DeleteAllButton1.Size = new System.Drawing.Size(124, 63);
+            this.DeleteAllButton1.Size = new System.Drawing.Size(67, 28);
             this.DeleteAllButton1.TabIndex = 1;
             this.DeleteAllButton1.Text = "전체 삭제";
             this.DeleteAllButton1.UseVisualStyleBackColor = true;
@@ -163,10 +169,11 @@
             // 
             this.DeleteFileButton1.AutoSize = true;
             this.DeleteFileButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DeleteFileButton1.Location = new System.Drawing.Point(355, 3);
+            this.DeleteFileButton1.Location = new System.Drawing.Point(190, 2);
+            this.DeleteFileButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteFileButton1.Name = "DeleteFileButton1";
             this.DeleteFileButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.DeleteFileButton1.Size = new System.Drawing.Size(124, 63);
+            this.DeleteFileButton1.Size = new System.Drawing.Size(67, 28);
             this.DeleteFileButton1.TabIndex = 2;
             this.DeleteFileButton1.Text = "삭제";
             this.DeleteFileButton1.UseVisualStyleBackColor = true;
@@ -178,9 +185,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(3, 18);
+            this.label1.Location = new System.Drawing.Point(2, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(575, 32);
+            this.label1.Size = new System.Drawing.Size(306, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "동영상";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -195,11 +203,12 @@
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel10, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 53);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 27);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(575, 414);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(306, 200);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // MovieListBox
@@ -208,12 +217,12 @@
             this.MovieListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MovieListBox.FormattingEnabled = true;
             this.MovieListBox.HorizontalScrollbar = true;
-            this.MovieListBox.ItemHeight = 24;
-            this.MovieListBox.Location = new System.Drawing.Point(67, 20);
-            this.MovieListBox.Margin = new System.Windows.Forms.Padding(10, 20, 10, 0);
+            this.MovieListBox.ItemHeight = 12;
+            this.MovieListBox.Location = new System.Drawing.Point(35, 10);
+            this.MovieListBox.Margin = new System.Windows.Forms.Padding(5, 10, 5, 0);
             this.MovieListBox.Name = "MovieListBox";
             this.MovieListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.MovieListBox.Size = new System.Drawing.Size(440, 394);
+            this.MovieListBox.Size = new System.Drawing.Size(234, 190);
             this.MovieListBox.TabIndex = 3;
             this.MovieListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.MovieListBox_DragDrop);
             this.MovieListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.MovieListBox_DragEnter);
@@ -222,13 +231,14 @@
             // 
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 11F));
             this.tableLayoutPanel7.Controls.Add(this.MoveToTopButton1, 0, 2);
             this.tableLayoutPanel7.Controls.Add(this.MoveUpButton1, 0, 3);
             this.tableLayoutPanel7.Controls.Add(this.MoveDownButton1, 0, 4);
             this.tableLayoutPanel7.Controls.Add(this.MoveToBottomButton1, 0, 5);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(520, 3);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(276, 2);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 8;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -239,7 +249,7 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(52, 408);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(28, 196);
             this.tableLayoutPanel7.TabIndex = 4;
             // 
             // MoveToTopButton1
@@ -247,9 +257,10 @@
             this.MoveToTopButton1.AutoSize = true;
             this.MoveToTopButton1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MoveToTopButton1.Image = ((System.Drawing.Image)(resources.GetObject("MoveToTopButton1.Image")));
-            this.MoveToTopButton1.Location = new System.Drawing.Point(3, 105);
+            this.MoveToTopButton1.Location = new System.Drawing.Point(2, 50);
+            this.MoveToTopButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MoveToTopButton1.Name = "MoveToTopButton1";
-            this.MoveToTopButton1.Size = new System.Drawing.Size(46, 45);
+            this.MoveToTopButton1.Size = new System.Drawing.Size(24, 20);
             this.MoveToTopButton1.TabIndex = 5;
             this.MoveToTopButton1.UseVisualStyleBackColor = true;
             this.MoveToTopButton1.Click += new System.EventHandler(this.MoveToTopButton1_Click);
@@ -258,9 +269,10 @@
             // 
             this.MoveUpButton1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MoveUpButton1.Image = ((System.Drawing.Image)(resources.GetObject("MoveUpButton1.Image")));
-            this.MoveUpButton1.Location = new System.Drawing.Point(3, 156);
+            this.MoveUpButton1.Location = new System.Drawing.Point(2, 74);
+            this.MoveUpButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MoveUpButton1.Name = "MoveUpButton1";
-            this.MoveUpButton1.Size = new System.Drawing.Size(46, 45);
+            this.MoveUpButton1.Size = new System.Drawing.Size(24, 20);
             this.MoveUpButton1.TabIndex = 6;
             this.MoveUpButton1.UseVisualStyleBackColor = true;
             this.MoveUpButton1.Click += new System.EventHandler(this.MoveUpButton1_Click);
@@ -269,9 +281,10 @@
             // 
             this.MoveDownButton1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MoveDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("MoveDownButton1.Image")));
-            this.MoveDownButton1.Location = new System.Drawing.Point(3, 207);
+            this.MoveDownButton1.Location = new System.Drawing.Point(2, 98);
+            this.MoveDownButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MoveDownButton1.Name = "MoveDownButton1";
-            this.MoveDownButton1.Size = new System.Drawing.Size(46, 45);
+            this.MoveDownButton1.Size = new System.Drawing.Size(24, 20);
             this.MoveDownButton1.TabIndex = 7;
             this.MoveDownButton1.UseVisualStyleBackColor = true;
             this.MoveDownButton1.Click += new System.EventHandler(this.MoveDownButton1_Click);
@@ -280,9 +293,10 @@
             // 
             this.MoveToBottomButton1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MoveToBottomButton1.Image = ((System.Drawing.Image)(resources.GetObject("MoveToBottomButton1.Image")));
-            this.MoveToBottomButton1.Location = new System.Drawing.Point(3, 258);
+            this.MoveToBottomButton1.Location = new System.Drawing.Point(2, 122);
+            this.MoveToBottomButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MoveToBottomButton1.Name = "MoveToBottomButton1";
-            this.MoveToBottomButton1.Size = new System.Drawing.Size(46, 45);
+            this.MoveToBottomButton1.Size = new System.Drawing.Size(24, 20);
             this.MoveToBottomButton1.TabIndex = 8;
             this.MoveToBottomButton1.UseVisualStyleBackColor = true;
             this.MoveToBottomButton1.Click += new System.EventHandler(this.MoveToBottomButton1_Click);
@@ -291,11 +305,12 @@
             // 
             this.tableLayoutPanel10.ColumnCount = 1;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 11F));
             this.tableLayoutPanel10.Controls.Add(this.SortDescendingButton1, 0, 3);
             this.tableLayoutPanel10.Controls.Add(this.SortAscendingButton1, 0, 4);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 8;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -306,7 +321,7 @@
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(51, 408);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(26, 196);
             this.tableLayoutPanel10.TabIndex = 5;
             // 
             // SortDescendingButton1
@@ -314,9 +329,10 @@
             this.SortDescendingButton1.Cursor = System.Windows.Forms.Cursors.Default;
             this.SortDescendingButton1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SortDescendingButton1.Image = ((System.Drawing.Image)(resources.GetObject("SortDescendingButton1.Image")));
-            this.SortDescendingButton1.Location = new System.Drawing.Point(3, 156);
+            this.SortDescendingButton1.Location = new System.Drawing.Point(2, 74);
+            this.SortDescendingButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SortDescendingButton1.Name = "SortDescendingButton1";
-            this.SortDescendingButton1.Size = new System.Drawing.Size(45, 45);
+            this.SortDescendingButton1.Size = new System.Drawing.Size(22, 20);
             this.SortDescendingButton1.TabIndex = 0;
             this.SortDescendingButton1.UseVisualStyleBackColor = true;
             this.SortDescendingButton1.Click += new System.EventHandler(this.SortDescendingButton1_Click);
@@ -325,9 +341,10 @@
             // 
             this.SortAscendingButton1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SortAscendingButton1.Image = ((System.Drawing.Image)(resources.GetObject("SortAscendingButton1.Image")));
-            this.SortAscendingButton1.Location = new System.Drawing.Point(3, 207);
+            this.SortAscendingButton1.Location = new System.Drawing.Point(2, 98);
+            this.SortAscendingButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SortAscendingButton1.Name = "SortAscendingButton1";
-            this.SortAscendingButton1.Size = new System.Drawing.Size(45, 45);
+            this.SortAscendingButton1.Size = new System.Drawing.Size(22, 20);
             this.SortAscendingButton1.TabIndex = 1;
             this.SortAscendingButton1.UseVisualStyleBackColor = true;
             this.SortAscendingButton1.Click += new System.EventHandler(this.SortAscendingButton1_Click);
@@ -340,13 +357,14 @@
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel8, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(590, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(318, 3);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(581, 545);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(311, 265);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // tableLayoutPanel5
@@ -361,20 +379,22 @@
             this.tableLayoutPanel5.Controls.Add(this.DeleteAllButton2, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.DeleteFileButton2, 3, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 473);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 231);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(575, 69);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(307, 32);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // AddFileButton2
             // 
             this.AddFileButton2.AutoSize = true;
             this.AddFileButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddFileButton2.Location = new System.Drawing.Point(95, 3);
+            this.AddFileButton2.Location = new System.Drawing.Point(49, 2);
+            this.AddFileButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddFileButton2.Name = "AddFileButton2";
-            this.AddFileButton2.Size = new System.Drawing.Size(124, 63);
+            this.AddFileButton2.Size = new System.Drawing.Size(67, 28);
             this.AddFileButton2.TabIndex = 0;
             this.AddFileButton2.Text = "파일 추가";
             this.AddFileButton2.UseVisualStyleBackColor = true;
@@ -384,9 +404,10 @@
             // 
             this.DeleteAllButton2.AutoSize = true;
             this.DeleteAllButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DeleteAllButton2.Location = new System.Drawing.Point(225, 3);
+            this.DeleteAllButton2.Location = new System.Drawing.Point(120, 2);
+            this.DeleteAllButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteAllButton2.Name = "DeleteAllButton2";
-            this.DeleteAllButton2.Size = new System.Drawing.Size(124, 63);
+            this.DeleteAllButton2.Size = new System.Drawing.Size(67, 28);
             this.DeleteAllButton2.TabIndex = 1;
             this.DeleteAllButton2.Text = "전체 삭제";
             this.DeleteAllButton2.UseVisualStyleBackColor = true;
@@ -396,9 +417,10 @@
             // 
             this.DeleteFileButton2.AutoSize = true;
             this.DeleteFileButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DeleteFileButton2.Location = new System.Drawing.Point(355, 3);
+            this.DeleteFileButton2.Location = new System.Drawing.Point(191, 2);
+            this.DeleteFileButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteFileButton2.Name = "DeleteFileButton2";
-            this.DeleteFileButton2.Size = new System.Drawing.Size(124, 63);
+            this.DeleteFileButton2.Size = new System.Drawing.Size(67, 28);
             this.DeleteFileButton2.TabIndex = 2;
             this.DeleteFileButton2.Text = "  삭제  ";
             this.DeleteFileButton2.UseVisualStyleBackColor = true;
@@ -410,10 +432,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(0, 18);
+            this.label2.Location = new System.Drawing.Point(0, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(581, 32);
+            this.label2.Size = new System.Drawing.Size(311, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "자막";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -428,11 +450,12 @@
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel11, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 53);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(2, 27);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(575, 414);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(307, 200);
             this.tableLayoutPanel8.TabIndex = 2;
             // 
             // SubtitleListBox
@@ -441,12 +464,12 @@
             this.SubtitleListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SubtitleListBox.FormattingEnabled = true;
             this.SubtitleListBox.HorizontalScrollbar = true;
-            this.SubtitleListBox.ItemHeight = 24;
-            this.SubtitleListBox.Location = new System.Drawing.Point(67, 20);
-            this.SubtitleListBox.Margin = new System.Windows.Forms.Padding(10, 20, 10, 0);
+            this.SubtitleListBox.ItemHeight = 12;
+            this.SubtitleListBox.Location = new System.Drawing.Point(35, 10);
+            this.SubtitleListBox.Margin = new System.Windows.Forms.Padding(5, 10, 5, 0);
             this.SubtitleListBox.Name = "SubtitleListBox";
             this.SubtitleListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.SubtitleListBox.Size = new System.Drawing.Size(440, 394);
+            this.SubtitleListBox.Size = new System.Drawing.Size(235, 190);
             this.SubtitleListBox.TabIndex = 3;
             this.SubtitleListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.SubtitleListBox_DragDrop);
             this.SubtitleListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.SubtitleListBox_DragEnter);
@@ -455,13 +478,14 @@
             // 
             this.tableLayoutPanel9.ColumnCount = 1;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 11F));
             this.tableLayoutPanel9.Controls.Add(this.MoveToTopButton2, 0, 2);
             this.tableLayoutPanel9.Controls.Add(this.MoveUpButton2, 0, 3);
             this.tableLayoutPanel9.Controls.Add(this.MoveDownButton2, 0, 4);
             this.tableLayoutPanel9.Controls.Add(this.MoveToBottomButton2, 0, 5);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(520, 3);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(277, 2);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 8;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -472,16 +496,17 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(52, 408);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(28, 196);
             this.tableLayoutPanel9.TabIndex = 4;
             // 
             // MoveToTopButton2
             // 
             this.MoveToTopButton2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MoveToTopButton2.Image = ((System.Drawing.Image)(resources.GetObject("MoveToTopButton2.Image")));
-            this.MoveToTopButton2.Location = new System.Drawing.Point(3, 105);
+            this.MoveToTopButton2.Location = new System.Drawing.Point(2, 50);
+            this.MoveToTopButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MoveToTopButton2.Name = "MoveToTopButton2";
-            this.MoveToTopButton2.Size = new System.Drawing.Size(46, 45);
+            this.MoveToTopButton2.Size = new System.Drawing.Size(24, 20);
             this.MoveToTopButton2.TabIndex = 0;
             this.MoveToTopButton2.UseVisualStyleBackColor = true;
             this.MoveToTopButton2.Click += new System.EventHandler(this.MoveToTopButton2_Click);
@@ -490,9 +515,10 @@
             // 
             this.MoveUpButton2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MoveUpButton2.Image = ((System.Drawing.Image)(resources.GetObject("MoveUpButton2.Image")));
-            this.MoveUpButton2.Location = new System.Drawing.Point(3, 156);
+            this.MoveUpButton2.Location = new System.Drawing.Point(2, 74);
+            this.MoveUpButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MoveUpButton2.Name = "MoveUpButton2";
-            this.MoveUpButton2.Size = new System.Drawing.Size(46, 45);
+            this.MoveUpButton2.Size = new System.Drawing.Size(24, 20);
             this.MoveUpButton2.TabIndex = 1;
             this.MoveUpButton2.UseVisualStyleBackColor = true;
             this.MoveUpButton2.Click += new System.EventHandler(this.MoveUpButton2_Click);
@@ -501,9 +527,10 @@
             // 
             this.MoveDownButton2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MoveDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("MoveDownButton2.Image")));
-            this.MoveDownButton2.Location = new System.Drawing.Point(3, 207);
+            this.MoveDownButton2.Location = new System.Drawing.Point(2, 98);
+            this.MoveDownButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MoveDownButton2.Name = "MoveDownButton2";
-            this.MoveDownButton2.Size = new System.Drawing.Size(46, 45);
+            this.MoveDownButton2.Size = new System.Drawing.Size(24, 20);
             this.MoveDownButton2.TabIndex = 2;
             this.MoveDownButton2.UseVisualStyleBackColor = true;
             this.MoveDownButton2.Click += new System.EventHandler(this.MoveDownButton2_Click);
@@ -512,9 +539,10 @@
             // 
             this.MoveToBottomButton2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MoveToBottomButton2.Image = ((System.Drawing.Image)(resources.GetObject("MoveToBottomButton2.Image")));
-            this.MoveToBottomButton2.Location = new System.Drawing.Point(3, 258);
+            this.MoveToBottomButton2.Location = new System.Drawing.Point(2, 122);
+            this.MoveToBottomButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MoveToBottomButton2.Name = "MoveToBottomButton2";
-            this.MoveToBottomButton2.Size = new System.Drawing.Size(46, 45);
+            this.MoveToBottomButton2.Size = new System.Drawing.Size(24, 20);
             this.MoveToBottomButton2.TabIndex = 3;
             this.MoveToBottomButton2.UseVisualStyleBackColor = true;
             this.MoveToBottomButton2.Click += new System.EventHandler(this.MoveToBottomButton2_Click);
@@ -523,11 +551,12 @@
             // 
             this.tableLayoutPanel11.ColumnCount = 1;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 11F));
             this.tableLayoutPanel11.Controls.Add(this.SortDescendingButton2, 0, 3);
             this.tableLayoutPanel11.Controls.Add(this.SortAscendingButton2, 0, 4);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 8;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -538,16 +567,17 @@
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(51, 408);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(26, 196);
             this.tableLayoutPanel11.TabIndex = 5;
             // 
             // SortDescendingButton2
             // 
             this.SortDescendingButton2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SortDescendingButton2.Image = ((System.Drawing.Image)(resources.GetObject("SortDescendingButton2.Image")));
-            this.SortDescendingButton2.Location = new System.Drawing.Point(3, 156);
+            this.SortDescendingButton2.Location = new System.Drawing.Point(2, 74);
+            this.SortDescendingButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SortDescendingButton2.Name = "SortDescendingButton2";
-            this.SortDescendingButton2.Size = new System.Drawing.Size(45, 45);
+            this.SortDescendingButton2.Size = new System.Drawing.Size(22, 20);
             this.SortDescendingButton2.TabIndex = 0;
             this.SortDescendingButton2.UseVisualStyleBackColor = true;
             this.SortDescendingButton2.Click += new System.EventHandler(this.SortDescendingButton2_Click);
@@ -556,19 +586,20 @@
             // 
             this.SortAscendingButton2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SortAscendingButton2.Image = ((System.Drawing.Image)(resources.GetObject("SortAscendingButton2.Image")));
-            this.SortAscendingButton2.Location = new System.Drawing.Point(3, 207);
+            this.SortAscendingButton2.Location = new System.Drawing.Point(2, 98);
+            this.SortAscendingButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SortAscendingButton2.Name = "SortAscendingButton2";
-            this.SortAscendingButton2.Size = new System.Drawing.Size(45, 45);
+            this.SortAscendingButton2.Size = new System.Drawing.Size(22, 20);
             this.SortAscendingButton2.TabIndex = 1;
             this.SortAscendingButton2.UseVisualStyleBackColor = true;
             this.SortAscendingButton2.Click += new System.EventHandler(this.SortAscendingButton2_Click);
             // 
             // ProcessButton
             // 
-            this.ProcessButton.Location = new System.Drawing.Point(787, 581);
-            this.ProcessButton.Margin = new System.Windows.Forms.Padding(200, 30, 200, 30);
+            this.ProcessButton.Location = new System.Drawing.Point(424, 286);
+            this.ProcessButton.Margin = new System.Windows.Forms.Padding(108, 15, 108, 15);
             this.ProcessButton.Name = "ProcessButton";
-            this.ProcessButton.Size = new System.Drawing.Size(187, 78);
+            this.ProcessButton.Size = new System.Drawing.Size(99, 38);
             this.ProcessButton.TabIndex = 3;
             this.ProcessButton.Text = "변환";
             this.ProcessButton.UseVisualStyleBackColor = true;
@@ -577,17 +608,17 @@
             // checkedListBox1
             // 
             this.checkedListBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.checkedListBox1.CheckOnClick = true;
             this.checkedListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
             "변환 후 동영상 열기",
             "자동 정렬"});
-            this.checkedListBox1.Location = new System.Drawing.Point(50, 571);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(50, 20, 50, 20);
+            this.checkedListBox1.Location = new System.Drawing.Point(28, 281);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(27, 10, 27, 10);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(487, 98);
+            this.checkedListBox1.Size = new System.Drawing.Size(260, 48);
             this.checkedListBox1.TabIndex = 4;
-            this.checkedListBox1.CheckOnClick = true;
             // 
             // menuStrip1
             // 
@@ -596,7 +627,8 @@
             this.도움말ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1174, 40);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(632, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -605,26 +637,27 @@
             this.도움말ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.InformationMenuItem});
             this.도움말ToolStripMenuItem.Name = "도움말ToolStripMenuItem";
-            this.도움말ToolStripMenuItem.Size = new System.Drawing.Size(99, 36);
+            this.도움말ToolStripMenuItem.Size = new System.Drawing.Size(55, 22);
             this.도움말ToolStripMenuItem.Text = "도움말";
             // 
             // InformationMenuItem
             // 
             this.InformationMenuItem.Name = "InformationMenuItem";
             this.InformationMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.InformationMenuItem.Size = new System.Drawing.Size(202, 38);
+            this.InformationMenuItem.Size = new System.Drawing.Size(118, 22);
             this.InformationMenuItem.Text = "정보";
             this.InformationMenuItem.Click += new System.EventHandler(this.InformationMenuItem_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 729);
+            this.ClientSize = new System.Drawing.Size(632, 364);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.Text = "Subtitle Renamer";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
